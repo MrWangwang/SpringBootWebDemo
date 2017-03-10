@@ -1,0 +1,1490 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*	reset	*/
+body,p,div,h1,h2,h3,h4,h5,h6,li,ol,ul,dl,dt,dd,span,th,td,form,input,button,pre{ margin:0; padding:0; font-family:Arial,'Microsoft YaHei';}
+body{ background:#143248; line-height:1.7; font-size:12px; font-family:Arial,"Microsoft YaHei";}
+a{ text-decoration:none; color: #000;}
+ul li,ol li,li{ list-style:none;}
+a img{ border:none;}
+table{ border-collapse:collapse;}
+.clearBoth{ clear: both;}
+h1,h2,h3,h4,h5,h6,table th{ font-size: 100%; font-weight:normal; }
+i,b{ font-weight:normal; font-family:Arial,"Microsoft YaHei"; font-style:normal;}
+
+/*	comm	*/
+.header{ width: 1200px; margin:0 auto; background: #0c72b8; height: 72px; line-height: 70px;}
+.header .header_left{ float: left; width: 350px; background: #0c72b8; height: 70px; text-align: center;}
+.header .header_left h1{ font-size: 20px; color: #FFF; margin-top:15px; margin-left:18px;}
+.header .header_right{ float: right; background: #0c72b8; margin-right:20px; cursor:pointer;}
+.header ol.navList{ float:right;}
+.header ol.navList li{ display:inline-block; margin-right:35px; font-size:14px;}
+.header ol.navList li a{color:#FFF;}
+.header ol.navList li a:hover{ text-decoration:underline;}
+.header ol.navList li.bold{ font-weight:bold;}
+.header ol.navList li.bold a:hover,.header ol.navList li.index a:hover{ text-decoration:none;}
+.header li.regLog{ width:110px;}
+.header li.regLog a{ color:#FFF; font-size:14px; padding:4px 6px;}
+.header li.regLog a.current{ border:1px solid #FFF; font-weight:normal;}
+.header li.regLog a:hover{ border:1px solid #FFF; font-weight:normal;}
+.header li.regLog font{ border:1px solid #FFF; margin-left:8px;}
+.header li.regLog font a{ font-weight:normal; color:#FFF;}
+.header .header_right .user_center{ height: 30px; line-height: 35px; margin: 20px 0; font-size: 12px; position:relative; float:left;}
+.header .header_right .user_center .user_pic{ width:45px; height:32px; display:inline-block; background:url(../image/ico.png) no-repeat -60px 0px; float:left}
+.header .header_right .user_center a{ color: #FFF; display:inline-block; float:left; margin-left:8px; cursor:pointer;}
+.header .header_right .user_center a:hover{ text-decoration:underline;}
+.header .header_right .user_center .user_triangle{ display:inline-block; float:left; margin-left:8px; cursor:pointer; background:url(../image/ico.png) no-repeat -106px 0px; width:18px; height:18px; margin-top:15px;}
+.header .header_right .user_center div.userDropDown{ display:none; width:100%; height:65px; position:absolute; top:50px; right:0px; z-index:99; }
+.header .header_right .user_center div.userDropDown .eleHiddenTri{ display:block; width:13px; height:15px; position:absolute; background:url(../image/ico.png) no-repeat -124px -68px; top:0px; left:48%;}
+.header .header_right .user_center div.userDropDown ul{ border:1px solid #0c69ab; border-top:0; border-radius:1px; margin-top:9px; width:100%; height:63px;}
+.header .header_right .user_center div.userDropDown ul li{ height:31px; width:100%; border-top:1px solid #085d99; background:#055087; text-align:center;}
+.header .header_right .user_center div.userDropDown ul li.current{background:#0c69ab;}
+.header .header_right .user_center div.userDropDown ul li a{display:block; float:none; color:#d2ebfe;}
+.header .header_right .user_center div.userDropDown ul li a:hover{ text-decoration:none;}
+.header div.current{ background:#0c69ab;}
+.header div.current .user_center .user_triangle{background:url(../image/ico.png) no-repeat -106px -106px;}
+.footer{ width:1145px; margin:0 auto; background:#061d2e; height:22px; line-height:22px; padding:24px 40px 24px 15px; position:relative;}
+.footer a{color:#929292; padding-right:15px; margin-left:15px; border-right:1px solid #929292;}
+.footer font{ color:#929292; margin-left:15px; font-size:12px;}
+.footer .webShare{ position:absolute; right:40px; top:15px; overflow:hidden;}
+.footer .webShare li{ margin-left:15px; display:inline;}
+.footer .webShare li a{ border:none; margin:0; padding:0;}
+.main{ width: 1200px; overflow: hidden; background: #eef2f5; margin: 0 auto; position:relative;}
+.currentGreen{ background:#F1FCEE;}
+.currentBlue{ background:#ECF7FB;}
+.orangeFont{ color:#ff6c00; font-size:12px;}
+.bodyCover{ width:100%; height:100%; z-index:99; background:#aaa;opacity: .3;filter: Alpha(Opacity=30); display:none; position:absolute; top:0; left:0;}
+.explainArea{ border:1px solid #BDBDBD; background:#FFF; padding:15px 20px; font-size:12px; position:absolute; z-index:999; }
+.explainTri{ background:url(../image/ico.png) no-repeat -142px -106px; position:absolute; top:-5px; left:40px; z-index:1000; width:10px; height:10px;}
+.explainArea h2{ margin-bottom:5px; color:#232323;}
+.explainArea table{ color:#666;}
+.explainArea p{ color:#232323; max-width:450px;}
+.explainArea table tr{ vertical-align:top;}
+.explainArea table th{ max-width:140px; text-align:left; padding:5px 0px;}
+.explainArea table td{ max-width:370px; text-align:left; padding:5px 0px;}
+.returnTOP{ width:26px; height:26px; position:fixed; bottom:300px; display:none; cursor:pointer; background:url(../image/ico.png) no-repeat -274px -71px;}
+.returnTOP.current{background:url(../image/ico.png) no-repeat -274px -106px;}
+.OnConPic{ width:35px; height:15px; position:absolute; margin-left:10px; background:url(../image/OnConPic.png)}
+
+
+/*	iconfont	*/
+@font-face {font-family: 'iconfont';
+    src: url('iconfont/iconfont.eot'); /* IE9*/
+    src: url('iconfont/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('iconfont/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('iconfont/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+ .iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+
+body table.areaBtn{ height:30px; position:relative; margin-top:30px; margin-bottom:40px; width:100%;}
+body table.areaBtn td font{ font-size:14px; text-align:center; color:#FFF; cursor:pointer; padding:6px 29px; line-height:30px;}
+body table.areaBtn td.tdLeft{ width:50%; text-align:right;}
+body table.areaBtn td.tdMid{ width:100%; text-align:center;}
+body table.areaBtn td.tdLeft font.confirm{ margin-right:10px; border:1px solid #4ba9df; border-radius:5px; background:#4ba9df;}
+body table.areaBtn td.tdLeft font.previous{ margin-right:10px; border:1px solid #8ed65b; border-radius:5px; background:#8ed65b;}
+body table.areaBtn td.tdRight{ width:50%; text-align:left;}
+body table.areaBtn td.tdRight font.cancel{ margin-left:10px; border:1px solid #818ea1; border-radius:5px; background:#818ea1;}
+body table.areaBtn td.tdRight font.confirm{ margin-left:10px; border:1px solid #4ba9df; border-radius:5px; background:#4ba9df;}
+body table.areaBtn td.tdMid font.confirm{ margin-right:10px; border:1px solid #4ba9df; border-radius:5px; background:#4ba9df;}
+body table.areaBtn td.tdMid font.cancel{ margin-right:10px; border:1px solid #4ba9df; border-radius:5px; background:#4ba9df;}
+
+/*	home	*/
+.head{ width:100%; height:70px; position:absolute; top:0px; z-index:99;}
+.head .header{ background:none;}
+.head .header .header_left{background: none;}
+.head .header .header_right{background: none;}
+.indexSlide{ width:100%; position:relative; overflow:hidden; height:660px;}
+.indexSlide img{ width:1400px; display:block; margin:0 auto; margin-top:-20px;}
+.indexSlide ol{ position:absolute; bottom:15px; z-index:99; width:300px; left:43%;}
+.indexSlide ol li{ float:left; width:12px; height:12px; background:url(../image/slideBtn_c.png) no-repeat; margin-left:30px; cursor:pointer;}
+.indexSlide ol li.current{ background:url(../image/slideBtn.png) no-repeat;}
+.slideWrap{ width:5600px; position:absolute;}
+.slide.left{ padding-top:30px; width:1400px; float:left; position:relative; height:630px;}
+.slide.left h3{ border:1px solid #FFF; border-radius:10px; width:165px; height:55px; font-size:24px; text-align:center; line-height:55px; position:absolute; top:440px; left:20%; cursor:pointer;}
+.slide.left h3 a{color:#FFF;} 
+.slide.left ul{ position:absolute; top:280px; left:20%; font-size:22px; color:#FFF;}
+.slide.left ul li{ margin-bottom:10px;}
+.slide.left h1{ font-size:36px; color:#FFF; position:absolute; top:220px;left:20%;}
+.slide.right{ padding-top:30px; width:1400px; float:left; position:relative; height:630px;}
+.slide.right h3{ border:1px solid #FFF; border-radius:10px; width:165px; height:55px; font-size:24px; text-align:center; line-height:55px; position:absolute; top:440px; right:20%; cursor:pointer;}
+.slide.right h3 a{color:#FFF;}
+.slide.right ul{ position:absolute; top:280px; right:20%; font-size:22px; color:#FFF;}
+.slide.right ul li{ margin:20px 0px;}
+.slide.right h1{ font-size:36px; color:#FFF; position:absolute; top:220px;right:20%;}
+.homeOuter{ width:100%; padding:50px 0px; padding-bottom:90px;}
+.homeOuter .homeBox{ width:85%; margin:0 auto; height:305px;}
+.homeOuter .homeBox div{ width:100%;}
+.homeOuter .homeBox div img{ width:100%;}
+.homeOuter .homeBox table{ width:100%; text-align:center; color:#646e7e; font-size:14px;}
+.homeOuter .homeBox table tr.trFirst{ font-size:24px; color:#646e7e; background:#FFF; height:50px; vertical-align:top;}
+.homeOuter .homeBox table tr.trImg{ height:190px; vertical-align:top;}
+.homeOuter .homeRecent{ overflow:hidden; width:1200px; margin:0 auto;}
+.homeOuter .homeRecent h2{ font-size:30px; color:#333; text-align:center; margin-bottom:80px;}
+.homeOuter .homeRecent p{ position:relative; margin-bottom:5px;}
+.homeOuter .homeRecent p font{ position:absolute; right:21%; color:#818ea1; top:0px;}
+.homeOuter .homeRecent a{ color:#4ba9df; font-size:14px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; width:300px; display:inline-block;}
+.homeOuter .homeRecent a:hover{ text-decoration:underline;}
+.homeOuter .homeRecent .left{ width:46%; float:left; border-right:1px dashed #818ea1; padding:0px 25px;}
+.homeOuter .homeRecent .right{ width:44%; float:left; padding:0px 25px;}
+.homeOuter .homeRecent .right p{ margin-left:110px;}
+.homeOuter .homeRecent .right p font{ position:absolute; right:0; color:#818ea1;}
+.homeOuter .homeCase{ overflow:hidden; width:63%; margin:0 auto;}
+.homeOuter .homeCase h2{ font-size:30px; color:#333; text-align:center; margin-bottom:60px;}
+.homeOuter .homeCase ul li{ display:inline-block; margin:15px 40px;}
+.foot{ width:100%; background:#061d2d;}
+.footMain{ width:1200px; overflow:hidden; padding:70px 0px; margin:0 auto; height:160px}
+.footMain .footBox{ width:22%; float:left; padding-left:100px;}
+.footMain .footBox p{ color:#5d6368; font-size:12px; margin-top:8px;}
+.footMain .footBox h2{ color:#FFF; margin:10px 0px;}
+.footMain .footBox p a{ color:#757b81;}
+.footMain .footBox p a:hover{ color:#FFF; text-decoration:underline;}
+.home .header .header_right .user_center div.userDropDown .eleHiddenTri{ display:block; width:13px; height:15px; position:absolute; background:url(../image/ico.png) no-repeat -124px -106px; top:4px; left:48%;}
+.home .header .header_right .user_center div.userDropDown ul{ border:1px solid #e0e6ea; border-top:0; border-radius:1px; margin-top:9px; width:100%; height:63px; border-radius:3px;}
+.home .header .header_right .user_center div.userDropDown ul li{ height:31px; width:100%; border-top:1px solid #e0e6ea; background:#FFF; text-align:center;}
+.home .header .header_right .user_center div.userDropDown ul li.current{background:#d2ebfe;}
+.home .header .header_right .user_center div.userDropDown ul li a{display:block; float:none; color:#666;}
+.home .header .header_right .user_center div.userDropDown ul li a:hover{ text-decoration:none;}
+.home .header div.current .user_center .user_triangle{background:url(../image/ico.png) no-repeat -106px -106px;}
+
+/*	app-introduce	*/
+/*	leftNav	*/
+.main .left{ width: 200px; float: left; background: #FFF; position: relative;}
+.main .left .topNav{ height: 80px; position: relative;}
+.main .left .topNav img{ position: absolute; top: 17px; height:40px; width:40px; left:10px;}
+.main .left .topNav h2{ font-size: 14px; color: #646e7e; position: absolute; top: 20px; left: 60px; width:125px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.main .left .topNav p{ font-size: 12px; color: #0c72b8; position: absolute; top: 40px; left: 60px; padding-right: 15px; cursor: pointer;}
+.main .left .topNav p span.triangle{ background:url(../image/ico.png) no-repeat -124px 10px; width:18px; height:18px; margin-left:8px; display:inline-block;}
+.main .left .topNav p.thisCurrent span.triangle{ background:url(../image/ico.png) no-repeat -106px -61px;}
+.main .left .topNav div.appChange{ width:192px; background:#FFF url(../image/ico.png) no-repeat 0px -284px; padding-top:10px; position:absolute; height:120px; z-index:99; top:68px; left:5px; display:none;}
+.main .left .topNav div.appChange ul{ width:179px; border:5px solid #e9f0f5;}
+.main .left .topNav div.appChange h3{ background:#e9f0f5; font-size:12px; color:#333; padding-left:5px;}
+.main .left .topNav div.appChange .appChangeList{ width:189px; border:1px solid #94c2e5; border-top:0; border-bottom-left-radius:3px;border-bottom-right-radius:3px; background:#FFF;}
+.main .left .topNav div.appChange .appChangeList ul{ background:#FFF; height:400px; overflow:hidden; position:relative;}
+.main .left .topNav div.appChange .appChangeList li{background:#FFF;height:40px; border-bottom:1px solid #f6f6f6; background:#FFF; z-index:100; line-height:40px;}
+.main .left .topNav div.appChange .appChangeList li a{ display:block; height:30px; margin:9px auto; font-size:12px; color:#646e7e;}
+.main .left .topNav div.appChange .appChangeList li a img{ height:28px; width:28px; position:static; float:left;}
+.main .left .topNav div.appChange .appChangeList li a span{ height:30px; line-height:30px; float:left; width:142px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.main .left .mainNav{ overflow:hidden;}
+.main .left .mainNav ul li{ height: 50px; cursor: pointer; width: 200px; line-height: 50px; font-size: 14px; border-bottom:1px solid #f0f4f6; position:relative;}
+.main .left .mainNav ul li span{ background: url(../image/ico.png) no-repeat; width:18px; height:18px; display:inline-block; position:absolute; top:21px; left:26px;}
+.main .left .mainNav ul li.current span{ left:21px; background: url(../image/ico_2.png) no-repeat;}
+.main .left .mainNav ul li font{ display:block; width:12px; height:12px; position:absolute; top:21px; right:26px; background:url(../image/ico.png) no-repeat -160px 0px;}
+.main .left .mainNav ul li.current font{ right:31px;}
+.main .left .mainNav ul li font.show{ background:url(../image/ico.png) no-repeat -142px 0px;}
+.main .left .mainNav ul li a{ color: #646e7e; margin-left:54px;}
+.main .left .mainNav ul dl.subNav{ display:none;}
+.main .left .mainNav ul dl dt{ height:50px; line-height:50px; font-size:12px; padding-left:50px;}
+.main .left .mainNav ul dl dt a{ color:#a3aab5;}
+.main .left .mainNav ul dl dt.current a,.main .left .mainNav ul dl dt.thisCurrent a{ color:#4ba9df;}
+.main .left .mainNav ul dl dt.thisCurrent a{ font-weight:bold;}
+.main .left .mainNav ul li.introduce span,.main .left .mainNav ul li.introduce.ClickCurrent span{ background-position:0px 0px;}
+.main .left .mainNav ul li.message span,.main .left .mainNav ul li.message.ClickCurrent span{ background-position:0px -18px;}
+.main .left .mainNav ul li.data span,.main .left .mainNav ul li.data.ClickCurrent span{ background-position:0px -35px;}
+.main .left .mainNav ul li.push span,.main .left .mainNav ul li.push.ClickCurrent span{ background-position:0px -53px;}
+.main .left .mainNav ul li.userset span,.main .left .mainNav ul li.userset.ClickCurrent span{ background-position:0px -71px;}
+.main .left .mainNav ul li.current{ border-left: 5px solid #0c72b8; background:#e8f5fe; border-bottom:0; padding-bottom:1px;}
+.main .left .mainNav ul li.current a{ color: #4ba9df; margin-left: 49px;}
+.main .left p{ position: absolute; bottom: 20px; left: 26px;}
+.main .left p a{ color: #4ba9df; font-size: 14px;}
+.main .left .mainNav ul li.ClickCurrent{ border-left: 5px solid #0c72b8; background:#e8f5fe; border-bottom:0; padding-bottom:1px;}
+.main .left .mainNav ul li.ClickCurrent a{ color: #4ba9df; margin-left: 49px;}
+.main .left .mainNav ul li.ClickCurrent span{ left:21px; background: url(../image/ico_2.png) no-repeat;}
+.main .left .mainNav ul li.ClickCurrent font{ right:31px;}
+.main .right{ float: left; width: 920px; padding: 34px 40px 40px;}
+.main .right h2{ font-weight: normal; font-size: 18px; color: #333; margin-bottom: 20px;}
+.main .right h2 span.ios{ font-size:14px; color:#646e7e; margin:0 10px;}
+.main .right h2 span.ios font.ios{background:url(../image/ico.png) no-repeat -71px -52px; width:20px; height:20px; display:inline-block;}
+.main .right h2 span.android{font-size:14px; color:#646e7e; margin:0 10px;}
+.main .right h2 span.android font.android{ background:url(../image/ico.png) no-repeat -71px -30px; width:20px; height:20px; display:inline-block;}
+.main .right h2 font{font-size:14px; color:#646e7e;}
+.main h2.h2Ico,.config h2.h2Ico{ height:30px; background:#4ba9df; border:1px solid #4ba9df; border-radius:5px; line-height:30px; position:relative; margin-left:20px; padding-left:30px;}
+.main h2.h2Ico span.ios,.config h2.h2Ico span.ios{ font-size:14px; color:#FFF; margin:0 10px;}
+.main h2.h2Ico span.ios font.ios,.config h2.h2Ico span.ios font.ios{ margin-left:10px; width:20px; background:url(../image/ico.png) no-repeat -283px -35px; margin-right:10px; display:inline-block; height:20px; position:absolute; top:5px; left:0px;}
+.main h2.h2Ico span.android,.config h2.h2Ico span.android{font-size:14px; color:#FFF; margin:0 10px;}
+.main h2.h2Ico span.android font.android,.config h2.h2Ico span.android font.android{ margin-left:10px; width:20px; background:url(../image/ico.png) no-repeat -283px 0px; margin-right:10px; display:inline-block; height:20px; position:absolute; top:5px; left:0px;}
+.main .right .rightBox{ background: #FFF; padding: 26px 30px; margin-bottom:30px;}
+.main .right .rightBox h3{ font-size: 16px; color: #232323; margin-bottom: 20px;}
+.main .right .rightBox h3 span{ color: #818ea1; font-size: 12px; margin-left: 10px;}
+.main .right .rightBox table{ font-size:12px; text-align:center; border:1px solid #eef2f5; border-radius:5px; -moz-border-radius:5px; -ms-border-radius:5px; -webkit-border-radius:5px;}
+.main .right .rightBox table span.appleIco{font-size:14px; color:#646e7e; padding-left:20px; background:url(../image/ico.png) no-repeat -70px -55px;}
+.main .right .rightBox table span.androidIco{font-size:14px; color:#646e7e; padding-left:20px; background:url(../image/ico.png) no-repeat -70px -34px; margin:0;}
+.main .right .rightBox table tr.trFirst{ background:#eef2f5; color:#818ea1;}
+.main .right .rightBox table tr{ border-bottom:1px solid #eef2f5;}
+.main .right .rightBox table a{ color:#4ba9df;}
+.main .right .rightBox .more{ text-align:right; margin-top:12px; padding-right:18px;}
+.main .right .rightBox .more a{color:#4ba9df;}
+.main .right .rightBox .dataPush{ float:left; width:165px; border-right:1px solid #eef2f5; text-align:center; padding:30px 0 0 0;}
+.main .right .rightBox .mulPush{ width:195px;}
+.main .right .rightBox .dataPush p{ margin-top:30px;}
+.main .right .rightBox .dataPush p a{ color:#4ba9df;}
+.main .right .rightBox .dataTable{ float:left; padding-left:30px; width:468px; height:155px;}
+
+/*	appList	*/
+.appList{ width:1144px; padding:40px 28px; background:#eef2f5; position: relative; min-height:450px;}
+.appList h1{ font-size:18px; color:#333333; font-weight:300;}
+.appList .addApp{ position: absolute; top: 40px; right: 28px; width: 120px; height: 30px; border: 1px solid #8ed65b; background: #8ed65b; border-radius: 5px; line-height: 30px; text-align: center; font-size: 14px; color: #fefefe; cursor: pointer; -moz-border-radius:5px; -ms-border-radius:5px; -webkit-border-radius:5px;}
+.appList .appTable{ background: #FFF; margin-top: 20px; padding: 0px 15px 0px 40px; color: #818ea1; text-align: left;}
+.appList .appTable table tr{ border-bottom:1px solid #eef2f5;}
+.appList .appTable table .appName{ font-size:16px; color:#333; margin-bottom:5px;}
+.appList .appTable table .appName span#appname_span{ margin-left:0px; font-size:16px;}
+.appList .appTable table .appName span{ font-size:12px; color:#818ea1; margin-left:16px;}
+.appList .appTable table .androidIco{ width:50px; background:url(../image/ico.png) no-repeat -71px -34px; padding-left:20px; margin-right:20px; display:inline-block; height:20px;}
+.appList .appTable table .IOSIco{ width:50px; background:url(../image/ico.png) no-repeat -71px -54px; padding-left:20px; margin-right:20px; display:inline-block; height:17px;}
+.appList .appTable table .addAndroidIco,.appList .appTable table .addIOSIco{ border: 1px solid #e2e2e2; width: 84px; height: 30px; color: #b6d7a7; border-radius: 2px; text-align: center; line-height: 30px; font-size: 14px; cursor: pointer; overflow:hidden; vertical-align: top;}
+.appList .appTable table .appDetail{ border: 1px solid #e2e2e2; width: 84px; height: 30px; color: #b6d7a7; border-radius: 2px; text-align: center; line-height: 30px; font-size: 14px; cursor: pointer;}
+.appList .appTable table .appDetail a{ color: #4ba9df; display:inline-block; width:100%; height:100%;}
+.appList .appTable table .appSet{ border: 1px solid #e2e2e2; width: 50px; height: 30px; color: #b6d7a7; border-radius: 2px; text-align: center; line-height: 30px; font-size: 14px; cursor: pointer;}
+.appList .appTable table .appSet a{ color:#4ba9df; display:inline-block; width:100%; height:100%;}
+/*	appList dialog	*/
+.appAddDialog{width:440px; padding:15px; font-size:14px; font-family:Arial,'Microsoft YaHei'; border:1px solid #e5e5e5; border-radius:5px;}
+.appAddDialog h6{ font-size:14px; color:#333; border-bottom:1px solid #eef2f5; text-align:center; padding-bottom:15px; position:relative; margin-bottom:25px;}
+.dialogClose{ position:absolute; width:20px; height:20px; background:url(../image/ico.png) no-repeat 0px -212px; cursor:pointer; top:0px; right:0px;}
+.appAddDialog_1,.appAddDialog_2{ position：absolute; background:#FFF; top:0px; z-index:100; display:none;}
+.appAddDialog_1 table{ margin-bottom:15px;} 
+.appAddDialog_1 table th{color:#232323; text-align:right; height:35px;}
+.questionIco{display:inline-block; width:16px; height:16px; background:url(../image/ico.png) no-repeat -1px -177px; margin-left:6px; cursor:pointer;}
+.appAddDialog_1 table td{ position:relative;}
+.appAddDialog_1 table td font{margin-left:8px; padding:2px 4px; border:1px solid #e2e2e2; cursor:pointer; color:#4ba9df;}
+.appAddDialog_1 table td p.checkboxNotice{ position:absolute; font-size:12px; color:#ff6c00; left:-85px; width:400px; bottom:-15px; display:none;}
+.appAddDialog_1 table td{color:#646e7e; text-align:left; padding-left:8px;}
+.androidIco{ width:60px; background:url(../image/ico_2.png) no-repeat 0px -247px; padding-left:20px; margin-right:20px;}
+.IOSIco{ width:50px; background:url(../image/ico_2.png) no-repeat 0px -267px; padding-left:20px; margin-right:20px;}
+.appAddDialog label span.IOSIco,.appAddDialog label span.androidIco{ margin-left:5px;}
+.appAddDialog .checkBox{ width:10px; height:10px; border:1px solid #cdd2da; display:inline-block;}
+.appAddDialog .checkBox.current{ background:url(../image/ico.png) no-repeat 0px -270px;}
+.exc{ width:14px; height:14px; display:inline-block; background:url(../image/ico.png) no-repeat 0px -195px; margin-right:5px;}
+.appAddDialog_1 table form input[type='checkbox']{margin-right:6px;}
+.appAddDialog_1 p.notice{font-size:12px; color:#ff6c00; margin-left:5px;}
+.appAddDialog_2 h1{ font-size:18px; color:#0c72b8; font-family:Arial,'Microsoft YaHei'; margin-top:40px; margin-left:10px;}
+.appAddDialog_2 h2{ font-size:14px; color:#232323; font-family:Arial,'Microsoft YaHei'; margin-bottom:10px; margin-left:10px;}
+.appAddDialog_2 ul li{ font-size:14px; color:#818ea1; font-family:Arial,'Microsoft YaHei'; margin:0px 0px 15px 20px; font-size:12px;}
+.appAddDialog_2 ul li font{margin-left:8px; padding:2px 4px; border:1px solid #e2e2e2; cursor:pointer; color:#4ba9df;}
+.appAddDialog_2 ul li a{ color:#4ba9df; margin-left:15px;}
+.appAddDialog_2 p.notice{font-size:12px; color:#ff6c00; margin-top:15px;}
+.appAddDialog_2 .confirm{ left:38%}
+.appAddDialog_2 .areaBtn{ margin-top:55px;}
+.newAppDialog{width:570px; background:#FFF; padding:15px; font-size:14px; font-family:Arial,'Microsoft YaHei'; border:1px solid #e5e5e5; border-radius:5px; position:relative; z-index:100; display:none;}
+.newAppDialog div.cancel{ bottom:20px;}
+.newAppDialog a{ color:#4ba9df;}
+.newAppDialog h6{ font-size:14px; color:#333; border-bottom:1px solid #eef2f5; text-align:center; padding-bottom:15px; position:relative;}
+.newAppDialog h5{ height:50px; width:470px; margin:0 auto; margin-top:25px; margin-bottom:5px;}
+.newAppDialog_1 h5{ background:url(../image/newAppDialogIco.png) no-repeat 0px -70px;}
+.newAppDialog ul li{ display:inline; margin-left:10px;}
+.newAppStepList{ color:#818ea1; text-align:right;}
+.newAppStepList .fontBlue{ color:#4ba9df;}
+.newAppDialog table.newAppTable{ width:480px; margin:0 auto; color:#232323; margin-top:20px; table-layout:fixed;}
+.newAppDialog table.newAppTable td{position:relative;}
+.newAppDialog table td input[type='checkbox']{ margin-right:5px;}
+.newAppDialog_1 span.checkBox{}
+.newAppDialog_1 .checkBox{ width:10px; height:10px; border:1px solid #cdd2da; display:inline-block; margin-right:10px;}
+.newAppDialog_1 .checkBox.current{ background:url(../image/ico.png) no-repeat 0px -270px;}
+.newAppDialog_1 span.IOSIco,.newAppDialog_1 span.androidIco,.newAppDialog_2 span.IOSIco,.newAppDialog_2 span.androidIco{ margin-right:0px;}
+.newAppDialog table td p.checkboxNotice{ position:absolute; font-size:12px; color:#ff6c00; left:-255px; width:400px; bottom:-5px; display:none;}
+.newAppDialog table input[type='text']{ height:28px; border:1px solid #dcdcdc; padding:0 8px; line-height:28px; width:136px; font-family:Arial,'Microsoft YaHei';}
+.newAppDialog table select{ height:30px; border:1px solid #dcdcdc; line-height:28px; width:154px; font-family:Arial,'Microsoft YaHei';}
+.newAppDialog td.orangeFont{ padding-left:26px;}
+.newAppDialog_1 .confirm{left:44%;}
+.newAppDialog_2 h5{ background:url(../image/newAppDialogIco.png) no-repeat 0px -140px;}
+.newAppDialog_2 table.newAppTable{ color:#646e7e;}
+.newAppDialog_2 table.newAppTable th{ color:#232323; text-align:right;}
+.newAppDialog_2 table.newAppTable td{ padding-left:20px;}
+.newAppDialog_2 table td font{margin-left:8px; padding:2px 4px; border:1px solid #e2e2e2; cursor:pointer; color:#4ba9df;}
+.newAppDialog_2 td.orangeFont{ padding-left:13px;}
+.newAppDialog_2 div.confirm,.newAppDialog_3 div.confirm{ left:52%;}
+.newAppDialog_2 div.previous,.newAppDialog_3 div.previous{ left:32%;}
+.newAppDialog_4 div.confirm{ left:40%;}
+.newAppDialog_3 h5{ background:url(../image/newAppDialogIco.png) no-repeat 0px -211px;}
+.newAppDialog_3 h4{ font-size:14px; color:#232323; text-align:center; margin:20px 0; margin-top:55px;}
+.newAppDialog_3 ul.SDKDownload{ width:365px; margin:15px auto; overflow:hidden;}
+.newAppDialog_3 ul.SDKDownload li{float:left; margin-left:35px;}
+.newAppDialog_3 ul.SDKDownload li p{ text-align:center; margin-top:10px;}
+.newAppDialog_4 h5{ background:url(../image/newAppDialogIco.png) no-repeat 0px -282px;}
+.newAppDialog_4 h3{ font-size:28px; color:#0c72b8; text-align:center; margin:20px 0;}
+.newAppDialog_4 p{ color:#646e7e; margin-left:100px; margin-top:5px;}
+
+/*	login	*/
+.loginBody{ width:250px; position:absolute;}
+.loginBody h1{ font-size:38px; color:#FFF; border-bottom:2px solid #4195c9; padding-bottom:5px; text-align:center;}
+.loginBody input[type='text'],.loginBody input[type='password']{height:24px; padding:6px 8px; line-height:26px; font-size:14px; color:#FFF; width:232px; margin-top:10px; background:#3d9cd7; border:1px solid #3d9cd7; border-radius:5px;}
+.loginBody p{ position:relative;}
+.loginBody p span.checkNotice{ position:absolute; height: 22px; top: 18px; left: 260px; line-height: 22px; display:none; background:url(../image/error_bg_left.png) no-repeat left,url(../image/error_bg_right.png) no-repeat right; padding-left:9px; padding-right:3px;}
+.loginBody p span.checkNotice.passOK{ background:none; width:10px;}
+.loginBody p span.checkNotice span{ display:inline-block; height:22px; padding-left:5px; padding-right:5px; line-height:22px; background:#FFF; white-space: nowrap;}
+.loginBody p span.checkNotice span.passSpan{ display:none;}
+.loginBody label.placeholder{ position:absolute; font-size:14px; color:#ccecff; left:15px; top:16px; margin-left:0px;}
+.codeStepA label.placeholder{ position:absolute; font-size:14px; color:#818ea1; left:96px; top:4px; margin-left:0px;}
+.codeStepA .thrRow label.placeholder{ left:82px; top:2px;}
+.loginBody p.shortP{ height:40px; margin-top:10px; position:relative;}
+.loginBody p.shortP label.placeholder{ top:6px;}
+.loginBody p.shortP span.checkNotice{ top:8px;}
+.loginBody p.shortP span.passSpan{ margin-top:10px;}
+.loginBody p.reme{ height:36px; height:20px; margin:10px 0px;}
+.loginBody input.idcode{ width:139px; margin-top:0px; display:inline-block; float:left;}
+.loginBody span.idcodeImg{ display:block; float:left; width:81px; height:36px; background:#7dbfe8; margin-left:10px; border:1px solid #7dbfe8; border-radius:5px; line-height:38px; text-align:center; color:#FFF; font-size:20px; cursor:pointer; overflow:hidden;}
+.loginBody span.spanCover{ display:none; position:absolute; width:81px; height:37px; line-height:80px; top:-1px; left:167px; font-size:20px; background:#999; opacity: .5;filter: Alpha(Opacity=50); border:1px solid #999; border-radius:5px; z-index:50;}
+.loginBody span.reflashCode{ display:none; position:absolute; width:81px; height:38px; left:167px; font-size:14px; top:0px; color:#FFF; line-height:38px; text-align:center; z-index:99; cursor:pointer;}
+.loginBody input[type='checkbox']{ display:none; }
+.loginBody label{ margin-left:30px; font-size:12px; color:#ccecff; }
+.loginBody input[type='button']{ cursor:pointer; height:38px; font-size:18px; font-family:Arial,'Microsoft YaHei';}
+.loginBody input[type='button'].doLogin{background:#90d868; border:1px solid #90d868; border-radius:5px; width:160px; color:#FFF;}
+.loginBody input[type='button'].doLogin:hover{ background:#8ED55B; border:1px solid #8ED55B;}
+.loginBody input[type='button'].loginReset{background:#FFF; border:1px solid #FFF; border-radius:5px; width:81px; color:#4ba9df; margin-left:5px;}
+.loginBody input[type='button'].loginReset:hover{ background:#F1F7F7; border:1px solid #F1F7F7;}
+.loginBody h6{ text-align:right; margin-top:10px;}
+.loginBody h6 a{ font-size:12px; color:#ccecff; cursor:pointer; }
+.loginBody h6 a:hover{ text-decoration: underline;}
+.loginBody h5{ border-top:2px solid #4195c9; color:#026daf; text-align:right; padding-top:2px;}
+.loginBody h5 a{ color:#ccecff;}
+.loginBody span.checkIn{ display:block; height:20px; background:url(../image/ico.png) no-repeat -280px -177px;}
+.loginBody span.checkOut{ background:url(../image/ico.png) no-repeat -280px -142px;}
+.loginBody .otherLog{ border-top:1px solid #4195c9; position:relative; width:390px; padding-top:25px; margin-left:-65px; margin-top:55px;}
+.loginBody .otherLog h2{ color:#FFF; font-size:14px; position:absolute; top:-13px; background:#41a5e1; width:170px; text-align:center; left:110px;}
+.loginBody .otherLog ul{ overflow:hidden; width:390px;}
+.loginBody .otherLog ul li{ display:inline-block; margin:0 2px; width:123px; height:42px;}
+.loginBody .otherLog ul li a{ display:block; width:123px; height:42px;}
+.loginBody .otherLog ul li.goFus{ background:url(../image/fusionIco.png) no-repeat;}
+.loginBody .otherLog ul li.goWukong{ background:url(../image/wukongIco.png) no-repeat;}
+.loginBody .otherLog ul li.goTrace{ background:url(../image/traceIoc.png) no-repeat;}
+.loginBody .otherLog ul li.goFus:hover{ background:url(../image/fusionIco_H.png) no-repeat;}
+.loginBody .otherLog ul li.goWukong:hover{ background:url(../image/wukongIco_H.png) no-repeat;}
+.loginBody .otherLog ul li.goTrace:hover{ background:url(../image/traceIoc_H.png) no-repeat;}
+.colBoxC{ width:120%; background:#41a5e1; position:absolute; bottom: -12%; -moz-transform:rotate(-12deg); -ms-transform:rotate(-12deg); -webkit-transform:rotate(-12deg); z-index:-1; height:50%;}
+.colBoxB{ width:30%; height:26%; background:#54b1e7; position:absolute; top:-13%; left:-10%; -moz-transform:rotate(-40deg); -webkit-transform:rotate(-40deg); -ms-transform:rotate(-40deg); z-index:-1;}
+.colBoxA{ width:70%; height:26%; background:#50ade3; position:absolute; top:-13%; right:-10%; -moz-transform:rotate(15deg); -webkit-transform:rotate(15deg); -ms-transform:rotate(15deg); z-index:-1;}
+.Codedialog{display:none;width:580px; background:#FFF; z-index:100; padding:10px 15px; border:1px solid #FFF; border-radius:5px; z-index:100; position:relative;}
+.Codedialog h5{ font-size:18px; color:#0c72b8; margin-top:40px; margin-left:100px; margin-bottom:20px;}
+.Codedialog h6{ font-size:14px; color:#333; border-bottom:1px solid #eef2f5; text-align:center; position:relative; height:30px;}
+.codeStepC h6,.codeStepC h5,.codeStepB h5{ text-align:center; margin-left:0px;}
+.Codedialog p{ margin-bottom:14px; margin-left:100px;}
+.Codedialog p label{ font-size:14px; color:#232323; margin-right:20px;}
+.Codedialog p input{ height:30px; line-height:30px; width:224px; padding:0px 8px; border:1px solid #dcdcdc; border-radius:1px; font-family:Arial,'Microsoft YaHei';}
+.Codedialog p font.codeError{ color:#ff6666; margin-left:5px;}
+.Codedialog p font.codeError span{ height:18px; display:inline-block; margin-right:5px; }
+.Codedialog p font.codeError span.passSpan{ background:url(../image/passSpanBg.png) no-repeat; width:18px; height:18px; display:inline-block;}
+.Codedialog .areaBtn{ position:relative; margin-top:30px; margin-bottom:30px;}
+.Codedialog .confirm{ left:33%;}
+.Codedialog .cancel{ left:52%;}
+.Codedialog .selfFind{ color:#4ba9df; cursor:pointer; position: absolute; left:19%; bottom:5px;}
+.Codedialog h4{ font-size:28px; color:#0c72b8; text-align:center; margin-top:40px; margin-bottom:26px;}
+.Codedialog h3{ font-size:14px; color:#232323; text-align:center;}
+.codeStepA p{ position:relative;}
+.codeStepA p.thrRow{ overflow:hidden; margin-top:15px;}
+.codeStepA p.thrRow font.codeError{ float:left; height:35px; display:block;}
+.codeStepA p.thrRow font.codeError span{ margin-top:10px;}
+.codeStepA p.thrRow label{ float:left; display:block; height:35px; line-height:35px; margin-left:14px;}
+.codeStepA p.thrRow span.idcodeImg{ float:left;}
+.codeStepA p.thrRow input{ float:left;}
+.codeStepA input.idcode{ width:138px; margin-top:0px; display:inline-block; height:35px; line-height:35px;}
+.codeStepA span.idcodeImg{ position:relative; display:inline-block; width:77px; height:35px; background:#7dbfe8; margin-left:8px; border:1px solid #7dbfe8; border-radius:5px; line-height:32px; text-align:center; color:#FFF; font-size:20px; cursor:pointer;}
+.codeStepA span.spanImg{ display:inline-block; height:35px; width:81px;}
+.codeStepA span.spanImg img{ border:0;}
+.codeStepA span.spanCover{ display:none; position:absolute; width:77px; height:35px; left:-1px; top:-1px; font-size:20px; background:#999; opacity: .5;filter: Alpha(Opacity=50); border:1px solid #999; border-radius:5px; z-index:50;}
+.codeStepA span.reflashCode{ display:none; position:absolute; width:77px; height:35px; left:0px; top:0px; font-size:14px; color:#FFF; line-height:35px; text-align:center; z-index:99; cursor:pointer;}
+.codeStepB .confirm,.codeStepC .confirm{ left:44%;}
+.codeStepC p{ font-size:14px;}
+.loginBody p span.checkNotice span.errorSpan{ color:red;}
+
+:-moz-placeholder {color: #818ea1;}
+::-moz-placeholder {color: #818ea1;}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {color: #818ea1;}
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {color: #818ea1;}
+.loginBody :-moz-placeholder{color: #ccecff;}
+.loginBody ::-moz-placeholder{color: #ccecff;}
+.loginBody input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {color: #ccecff;}
+.loginBody input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {color: #ccecff;}
+.registerBody ::-moz-placeholder{color: #ccecff;}
+.registerBody :-moz-placeholder{color: #ccecff;}
+.registerBody input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {color: #ccecff;}
+.registerBody input:-ms-input-placeholder,
+textarea:-ms-input-placeholder{color: #ccecff;}
+body form input:-webkit-autofill{ background-color:#3d9cd7!important; color:#FFF!important; -webkit-box-shadow: 0 0 0 1000px #3d9cd7 inset; -ms-box-shadow: 0 0 0 1000px #3d9cd7 inset;}
+body form input:-ms-autofill{ background-color:#3d9cd7!important; color:#FFF!important; -ms-box-shadow: 0 0 0 1000px #3d9cd7 inset; -ms-box-shadow: 0 0 0 1000px #3d9cd7 inset;}
+
+/*	other_login	*/
+.allMain{ background:#eef2f5; width:1150px; margin:0 auto; background:#eef2f5; padding:35px 25px; position:relative;}
+.allMain h1{ font-size:18px; color:#333; margin-bottom:20px;}
+.allMain span.returnLogin{ position:absolute; top:35px; right:35px;}
+.allMain span.returnLogin a{ color:#4ba9df; font-size:14px;}
+.allMain .allBox{ background:#fff; width:1148px; margin-top:15px; border:1px solid #FFF; }
+.allMain .allBox .otherLog{ width:300px; margin-top:30px; margin:0 auto; height:325px;}
+.allMain .allBox .otherLog .otherLogo{ width:300px; height:75px;}
+.allMain .allBox .otherLog .otherLogo div{ display:none; width:300px; height:75px;}
+.allMain .allBox .otherLog .otherLogo div.wukong{ display:none; background:url(../image/wukonglogo.png) no-repeat 100px 15px;}
+.allMain .allBox .otherLog .otherLogo div.trace{ background:url(../image/tracelogo.png) no-repeat 100px 15px;}
+.allMain .allBox .otherLog .otherLogo div.fusion{ background:url(../image/traceIco.png) no-repeat 100px 15px;}
+.allMain .allBox .otherLog p{ position:relative; width:450px; height:55px; line-height:55px; overflow:hidden;}
+.allMain .allBox .otherLog p .formItem{ float:left; margin-top:15px; margin-left:5px;}
+.allMain .allBox .otherLog p .formItem span{ height:20px; display:inline-block; margin-right:5px; line-height:20px;}
+.allMain .allBox .otherLog p .formItem span.passSpan{background:url(../image/passSpanBg.png) no-repeat;}
+.allMain .allBox .otherLog p label{ display:inline-block; width:55px; text-align:right; font-size:14px; color:#333; float:left;}
+.allMain .allBox .otherLog p input{ height:33px; line-height:33px; width:217px; padding:0px 8px; border:1px solid #dcdcdc; border-radius:1px; font-family:Arial,'Microsoft YaHei'; margin-left:10px; float:left; margin-top:10px;}
+.allMain .allBox .otherLog p.thrRow input{ width:125px;}
+.allMain .allBox .otherLog p.thrRow label{ float:left;}
+.allMain .allBox .otherLog p.thrRow span.idcodeImg{ float:left; margin-left:10px; margin-top:8px; background:#7dbfe8; border-radius:3px;}
+.allMain .allBox .otherLog p.thrRow input{ float:left; margin-top:8px;}
+.allMain span.spanCover{ display:none; position:absolute; width:80px; height:33px; left:-1px; top:-1px; font-size:20px; background:#999; opacity: .5;filter: Alpha(Opacity=50); border:1px solid #999; border-radius:5px; z-index:50;}
+.allMain span.reflashCode{ display:none; position:absolute; width:77px; height:35px; left:0px; top:0px; font-size:14px; color:#FFF; line-height:35px; text-align:center; z-index:99; cursor:pointer;}
+.allMain .idcodeImg{ position:relative;}
+.allMain div.confirm{background:#90d868; color:#FFF; font-size:16px; width:235px; margin-left:63px; border:1px solid #90d868; height:40px; line-height:40px; border-radius:5px; text-align:center; cursor:pointer; position:static; }
+.goReg{ text-align:right; display:inline-block; width:100%; margin-top:8px;}
+.goReg a{ color:#4ba9df;}
+
+/* register	*/
+.registerBody{ width:252px; position:absolute;}
+.registerBody h1{ font-size:38px; color:#FFF; border-bottom:2px solid #4195c9; margin-bottom:10px; text-align:center; padding-bottom:5px;}
+.registerBody p{ height:34px; margin-bottom:8px; position:relative;}
+.registerBody p.affiliate{ height:20px;}
+.registerBody p.returnLogin{ color:#026daf; height:14px; margin-top:6px; text-align:center; border-top:2px solid #4195c9; padding-top:6px;}
+.registerBody p.returnLogin a{color:#ccecff; }
+.registerBody p.returnLogin a:hover{ text-decoration:underline;}
+.registerBody p.thrRow label{ float:left;}
+.registerBody p.thrRow span.idcodeImg{ float:left;}
+.registerBody p.thrRow input{ float:left;}
+.registerBody p.thrRow span.Notice{ position:absolute; height: 22px; top: 5px; left: 260px; line-height: 22px; padding-left:9px; padding-right:3px;}
+.registerBody p.thrRow span.Notice span{ display:inline-block; height:22px; padding-left:5px; padding-right:5px; line-height:22px; background:#FFF; white-space: nowrap;}
+.registerBody p label.placeholder{ position:absolute; font-size:14px; color:#ccecff; left:10px; top:0px; margin-left:0px; text-align:left; width:120px;}				
+.registerBody p span.checkNotice{ position:absolute; height: 22px; top: 5px; left: 260px; line-height: 22px; display:none; background:url(../image/error_bg_left.png) no-repeat left,url(../image/error_bg_right.png) no-repeat right; padding-left:9px; padding-right:3px;}
+.registerBody p span.Notice{ position:absolute; height: 22px; top: 5px; left: 260px; line-height: 22px; display:none; background:url(../image/error_bg_left.png) no-repeat left,url(../image/error_bg_right.png) no-repeat right; padding-left:9px; padding-right:3px;}
+.registerBody p span.Notice.passOK{ background:url(../image/passSpanBg.png) no-repeat; width:10px;}
+.registerBody p span.Notice span{ display:inline-block; height:22px; padding-left:5px; padding-right:5px; line-height:22px; background:#FFF; white-space: nowrap;}
+.registerBody p span.Notice span.passSpan{ background:url(../image/ico.png) no-repeat -142px -35px; margin-top:7px; display:block;width:18px; height:18px; padding-left:0px; line-height:25px; display:none;}
+.registerBody p span.checkNotice.passOK{ background:url(../image/passSpanBg.png) no-repeat; width:10px;}
+.registerBody p span.checkNotice span{ display:inline-block; height:22px; padding-left:5px; padding-right:5px; line-height:22px; background:#FFF; white-space: nowrap;}
+.registerBody p span.checkNotice span.passSpan{ background:url(../image/ico.png) no-repeat -142px -35px; margin-top:7px; display:block;width:18px; height:18px; padding-left:0px; line-height:25px; display:none;}
+.registerBody p label{ display:inline-block; width:60px; text-align:right; font-size:14px; color:#ccecff; height:35px; line-height:35px;}
+.registerBody p input{ display:inline-block; height:32px; padding:0px 6px; line-height:32px; font-size:14px; color:#FFF; width:238px; background:#3d9cd7; border:1px solid #3d9cd7; border-radius:5px;}
+.registerBody input.idcode{ width:150px; margin-top:0px; display:inline-block;}
+.registerBody span.idcodeImg{ position:relative; display:inline-block; width:77px; height:32px; background:#7dbfe8; margin-left:8px; border:1px solid #7dbfe8; border-radius:5px; line-height:30px; text-align:center; color:#FFF; font-size:20px; cursor:pointer;}
+.registerBody span.spanImg{ display:inline-block; height:32px; width:81px;}
+.registerBody span.spanImg img{ border:0;}
+.registerBody span.spanCover{ display:none; position:absolute; width:77px; height:32px; left:-1px; top:-1px; font-size:20px; background:#999; opacity: .5;filter: Alpha(Opacity=50); border:1px solid #999; border-radius:5px; z-index:50;}
+.registerBody span.reflashCode{ display:none; position:absolute; width:77px; height:35px; left:0px; top:0px; font-size:14px; color:#FFF; line-height:35px; text-align:center; z-index:99; cursor:pointer;}
+.registerBody p span.clause{ font-size:12px; color:#026daf; width:85px; padding-left:26px; height:20px; line-height:20px; background:url(../image/ico.png) no-repeat -285px -262px; cursor:pointer; display:inline-block;}
+.registerBody p span.current{ background:url(../image/ico.png) no-repeat -285px -280px;}
+.registerBody p span.privacy{ margin-left:15px; color:#ccecff; cursor:pointer;}
+.registerBody p span.service{ margin-left:15px; color:#ccecff; cursor:pointer;}
+.registerBody input[type='button']{ width:250px; height:34px; margin-bottom:5px; background:#6ec742; border:1px solid #6ec742; border-radius:5px; cursor:pointer; line-height:34px;}
+.registerBody h6{ border-top:2px solid #4195c9; color:#026daf; text-align:center; padding-top:2px; margin-top:20px;}
+.registerBody input[type='button'].disabled{ background:#8ed65b; color:#fefefe; cursor:default;}
+.registerBody h6 a{ color:#ccecff;}
+.registerBody .otherLog{ border-top:1px solid #4195c9; position:relative; width:390px; padding-top: 30px; margin-left:-60px; margin-top: 25px;}
+.registerBody .otherLog h2{ color:#FFF; font-size:14px; position:absolute; top:-13px; background:#41a5e1; width:170px; text-align:center; left:110px;}
+.registerBody .otherLog ul{ overflow:hidden; width:390px;}
+.registerBody .otherLog ul li{ display:inline-block; margin:0 2px; width:123px; height:42px;}
+.registerBody .otherLog ul li a{ display:block; width:123px; height:42px;}
+.registerBody .otherLog ul li.goFus{ background:url(../image/fusionIco.png) no-repeat;}
+.registerBody .otherLog ul li.goWukong{ background:url(../image/wukongIco.png) no-repeat;}
+.registerBody .otherLog ul li.goTrace{ background:url(../image/traceIoc.png) no-repeat;}
+.registerBody .otherLog ul li.goFus:hover{ background:url(../image/fusionIco_H.png) no-repeat;}
+.registerBody .otherLog ul li.goWukong:hover{ background:url(../image/wukongIco_H.png) no-repeat;}
+.registerBody .otherLog ul li.goTrace:hover{ background:url(../image/traceIoc_H.png) no-repeat;}
+.termsService{ display:none; width:690px; height:440px;background:#FFF; z-index:100; padding:10px 15px; border:1px solid #FFF; border-radius:5px; z-index:100; position:relative;}
+.termsService h6{ font-size:14px; color:#333; border-bottom:1px solid #eef2f5; text-align:center; padding-bottom:15px; position:relative;}
+.termsService .serviceCon{ width:640px; padding:20px 25px; font-size:14px; color:#232323; line-height:1.8; height:280px; overflow:hidden; position:relative;}
+.termsService .serviceCon p{ text-indent:2em; width:638px; margin-bottom:10px;}
+.termsService .serviceCon p b{ display:block; text-indent:2em; font-size:12px;}
+.termsService .confirm{ left:28%;}
+.termsService .cancel{ left:54%;}
+.ps-container .ps-scrollbar-x-rail:hover .ps-scrollbar-x,
+.ps-container .ps-scrollbar-x-rail.hover .ps-scrollbar-x { background-color: #FFF;}
+.termsService .ps-container .ps-scrollbar-x,.privacyPolicy .ps-container .ps-scrollbar-x { background:none;}
+.privacyPolicy{ display:none; width:690px; height:440px;background:#FFF; z-index:100; padding:10px 15px; border:1px solid #FFF; border-radius:5px; z-index:100; position:relative;}
+.privacyPolicy h6{ font-size:14px; color:#333; border-bottom:1px solid #eef2f5; text-align:center; padding-bottom:15px; position:relative;}
+.privacyPolicy .serviceCon{ width:640px; padding:20px 25px; font-size:14px; color:#232323; line-height:1.8; height:280px; overflow:hidden; position:relative;}
+.privacyPolicy .serviceCon .underLine{ text-decoration:underline;}
+.privacyPolicy .serviceCon h4{ font-weight:bolder;}
+.privacyPolicy .serviceCon p{ text-indent:2em; width:638px; margin-bottom:10px;}
+.privacyPolicy .serviceCon p b{ display:block; text-indent:2em; font-size:12px;}
+.privacyPolicy .confirm{ left:28%;}
+.privacyPolicy .cancel{ left:54%;}
+
+/*	password_reset	*/
+.psReset{ width:1150px; margin:0 auto; min-height:460px; background:#eef2f5; padding:35px 25px; }
+.psReset h1{ font-size:18px; color:#333; margin-bottom:20px; font-weight:600;}
+.psResetBody{ width:1150px; background:#FFF; min-height:440px; position:relative;}
+.psResetBody h1{ position:absolute; top:40px; left:25px; font-size:16px; font-weight:normal;}
+.pwMain{ width:530px; height:220px; margin:auto; padding-top:120px;}
+.pwMain p{ margin-bottom:10px;}
+.pwMain p label{ display:inline-block; width:125px; font-size:14px; color:#232323; text-align:right;}
+.pwMain p input{ width:217px; height:33px; border:1px solid #dcdcdc; border-radius:1px; padding:0px 8px; line-height:35px; color:#232323;}
+.pwMain p font{ margin-left:130px; color:#999;}
+.pwMain p font.formItem{ margin-left:20px; color:#ff6666;}
+.pwMain p font.formItem span.passSpan{width: 18px;height: 18px;display: inline-block;background: url(../image/ico.png) no-repeat -142px -35px; margin-right: 8px;}
+.pwMain p font.formItem span.errorSpan{width: 18px;height: 18px;display: inline-block;background: url(../image/ico.png) no-repeat -162px -35px; margin-right: 8px;}
+.pwMain p input.idcode{ width:130px;}
+.pwMain div.confirm{ width:235px; height:38px; line-height:38px; border:1px solid #4ba9df; border-radius:3px; position:static; font-size:16px; margin-left:125px; margin-top:25px; background:#4ba9df; color:#FFF; text-align:center; cursor:pointer;}
+.pwMain p.thrRow{ overflow:hidden; margin-top:15px;}
+.pwMain p.thrRow font.formItem{ float:left; height:35px; line-height:35px;}
+.pwMain p.thrRow label{ float:left; display:block; height:35px; line-height:35px;}
+.pwMain p.thrRow span.idcodeImg{ float:left;}
+.pwMain p.thrRow input{ float:left;}
+.pwMain input.idcode{ width:144px; margin-top:0px; display:inline-block;}
+.pwMain span.idcodeImg{ position:relative; display:inline-block; width:77px; height:35px; background:#7dbfe8; margin-left:8px; border:1px solid #7dbfe8; border-radius:5px; line-height:32px; text-align:center; color:#FFF; font-size:20px; cursor:pointer;}
+.pwMain span.spanImg{ display:inline-block; height:35px; width:81px;}
+.pwMain span.spanImg img{ border:0;}
+.pwMain span.spanCover{ display:none; position:absolute; width:77px; height:35px; left:-1px; top:-1px; font-size:20px; background:#999; opacity: .5;filter: Alpha(Opacity=50); border:1px solid #999; border-radius:5px; z-index:50;}
+.pwMain span.reflashCode{ display:none; position:absolute; width:77px; height:35px; left:0px; top:0px; font-size:18px; color:#FFF; line-height:35px; text-align:center; z-index:99; cursor:pointer;}
+.pwRestOK{ width:1120px; height:320px; background:#FFF; z-index:100; padding:10px 15px; z-index:100; position:absolute; display:none; top:0px; text-align:center;}
+.pwRestOK h1{ background:url(../image/pwOK.png) no-repeat; height:50px; font-size:28px; color:#4BA9DF; padding-left:65px; position:static; width:160px; margin:40px auto;}
+.pwRestOK p{ color:#666; font-size:12px; margin-bottom:15px;}
+.pwRestOK p font{ color:#333;}
+.pwRestOK .confirm a{color:#FFF;}
+.pwRestOK table.areaBtn font.confirm{ display:inline-block; width:200px;}
+
+/*	data_introduce	*/
+.dataIntRight{ float: left; width: 920px; padding: 34px 40px 40px;}
+.dataIntRight .dataTitle h2{ font-weight: normal; font-size: 18px; color: #333; margin-bottom: 20px; float:left;}
+.dataIntRight .dataTitle h2 font.eventName{ color:#999; font-size:18px;}
+.dataIntRight .dataTitle h3{margin-left:20px; float:left; height:30px; background:#4ba9df; cursor:pointer; width:80px; padding-left:40px; border:1px solid #4ba9df; border-radius:5px; color:#FFF; font-size:14px; line-height:30px; position:relative;}
+.dataIntRight .dataTitle h3 i.iconfont{ margin:0 10px; background:url(../image/ico_2.png) no-repeat 0px -160px; display:inline-block; height:6px; width:10px;-ms-transform:rotate(0deg);-moz-transform:rotate(0deg);-webkit-transform:rotate(0deg); margin-bottom:0px;}
+.dataIntRight .dataTitle h3.current i.iconfont{-ms-transform:rotate(180deg);-moz-transform:rotate(180deg);-webkit-transform:rotate(180deg); margin-bottom:3px;}
+.dataIntRight .dataTitle h3 span.whiteAndroid{ margin-left:10px; width:20px; background:url(../image/ico.png) no-repeat -283px 0px; margin-right:10px; display:inline-block; height:20px; position:absolute; top:5px; left:0px;}
+.dataIntRight .dataTitle h3 span.whiteIOS{ margin-left:10px; width:20px; background:url(../image/ico.png) no-repeat -283px -35px; margin-right:10px; display:inline-block; height:20px; position:absolute; top:5px; left:0px;}
+.eleHidden span.IOSIco{ background:url(../image/ico.png) no-repeat -71px -52px; width:20px; height:20px; display:inline-block; padding:0px; margin:0px; margin-right:10px; position:absolute; top:4px; left:10px;}
+.eleHidden span.androidIco{ background:url(../image/ico.png) no-repeat -71px -33px; width:20px; height:20px; display:inline-block; padding:0px; margin:0px; margin-right:10px; position:absolute; top:4px; left:10px;}
+.dataIntRight .dataTitle h3 p{ width:80px; height:30px; border:1px solid #4ba9df;padding-left:40px; background:#FFF; text-align:left; line-height:30px; margin-top:-5px; z-index:99; margin-left:-41px; display:none; position:relative; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;}
+.dataIntRight .dataTitle h3 p:hover{ background:#E8F5FE;}
+.dataIntRight .dataTitle h3 p a{color:#818ea1; display:inline-block; width:100%; height:100%;}
+.dataIntRight .dataBox{ background: #FFF; padding: 26px 30px; margin-bottom:30px;}
+.dataIntRight .dataBox h3{ font-size: 16px; color: #232323; margin-bottom: 20px; position:relative;}
+.dataIntRight .dataBox h3 span{ color: #818ea1; font-size: 12px; margin-left: 10px;}
+.dataIntRight .dataBox h3 span.dataDownload{position:absolute; right:15px; background:url(../image/ico.png) no-repeat -233px 0px; height:16px; width:50px; padding-left:20px;}
+.dataIntRight .dataBox h3 span.dataDownload a{ color:#4ba9df;}
+.dataIntRight table{ color:#333; width:100%; text-align:center;}
+table .trFirst{background:#eef2f5; color:#818ea1;}
+.dataIntRight table tr{ height:49px;}
+.dataIntRight table tr.trFirst{ height:45px;}
+.dataIntRight table th{ color:#646e7e; width:16%;}
+.dataIntRight table .trFirst{border-bottom:1px solid #eef2f5;}
+.dataIntRight table td{ border-bottom:1px solid #eef2f5; border-right:1px solid #eef2f5; width:16%;}
+.dataIntRight table th{border:1px solid #eef2f5; border-top:0;}
+.dataIntRight .dataBox ul.totalBox{ overflow:hidden; margin-top:20px;}
+.dataIntRight .dataBox ul.totalBox li{ float:left; height:81px; width:278px; margin-right:10px; padding-top:15px;}
+.dataIntRight .dataBox ul.totalBox li.blueBorder{border:1px solid #4ba9df; border-radius:3px; -moz-border-radius:3px; -ms-border-radius:3px; -webkit-border-radius:3px;}
+.dataIntRight .dataBox ul.totalBox li.greenBorder{border:1px solid #8ed65d; border-radius:3px; -moz-border-radius:3px; -ms-border-radius:3px; -webkit-border-radius:3px;}
+.dataIntRight .dataBox ul.totalBox li.orangeBorder{margin-right:0;border:1px solid #ffc547; border-radius:3px; -moz-border-radius:3px; -ms-border-radius:3px; -webkit-border-radius:3px;}
+.dataIntRight .dataBox ul.totalBox li h4{ color:#818ea1; text-align:center; font-size:14px;}
+.dataIntRight .dataBox ul.totalBox li h5{ color:#333; font-size:24px; text-align:center;}
+.dataIntRight .dataBox ul.dataBoxTabs{border-bottom:1px solid #e8f5fe; position:relative; width:852px; z-index:999;}
+.dataIntRight .dataBox ul.dataBoxTabs li{ float:left; height:30px; width:150px; border:1px solid #e8f5fe; border-bottom:0; line-height:30px; background:#e8f5fe; text-align:center; font-size:14px; color:#4ba9df; margin-right:3px; cursor:pointer; border-top-left-radius:3px; border-top-right-radius:3px;}
+.dataIntRight .dataBox ul.dataBoxTabs li.current{ background:#4ba9df; color:#FFF;}
+.dataIntRight .dataBox div.dataChartsArea{ width:854px; height:319px;  border:1px solid #e8f5fe; border-top:0; border-radius:5px; -moz-border-radius:5px;-ms-border-radius:5px;-webkit-border-radius:5px;}
+
+/*	data_intention	*/
+.dataIntRight .dataBox .dataBoxTabs .timeArea{border:1px solid #dfdfdf; height:28px; width:218px; position:absolute; right:0px;bottom:3px; cursor:pointer; line-height:28px; color:#666;}
+.timeArea .timeSelect{ width:29px; border-left:1px solid #dfdfdf; float:left; height:28px; line-height:28px; text-align:center; font-size:12px; color:#666;}
+.timeArea .timeShow{ width:178px; float:left; height:28px;font-size:14px; padding-left:10px;}
+.timeArea ul.timeList{ display:none; margin-top:29px;}
+.dataIntRight .dataBox .dataBoxTabs .timeArea ul.timeList li{ width:208px; border:1px solid #dfdfdf; background:#FFF; margin-left:-1px; border-top:0; border-radius:0; padding-left:10px; color:#666; text-align:left;}
+.dataIntRight .dataBox .dataBoxTabs .timeArea ul.timeList li.daterangepicker{ position:static; padding:0px; padding-left:10px; margin-top:0px;}
+.tableTimeChange{ overflow:hidden;}
+.tableTimeChange li{ float:left; width:98px; height:28px; border:1px solid #e3f4ff; margin-right:10px; color:#4ba9df; font-size:14px; cursor:pointer; line-height:30px; text-align:center; border-radius:3px; -moz-border-radius:3px; -ms-border-radius:3px; -webkit-border-radius:3px;}
+.tableTimeChange li.current{ background:#4ba9df; color:#FFF;}
+.dataIntRight .dataBox .tableTabs{ display:none;}
+.dataIntRight .dataBox .tableTabs table{ margin-top:20px; position:relative; font-size:12px;}
+.dataIntRight .dataBox .tableTabs table tbody.tbody{height:260px; overflow:hidden; display:block;}
+.dataIntRight .dataBox .tableTabs table tr,.dataIntRight .dataBox .tableTabs .mainTable tr{ height:40px;}
+.dataIntRight .dataBox .tableTabs table tr.trFirst{ height:45px; color:#646e7e; cursor:pointer; background:#eef2f5 url(../image/tablesorterBg.png) no-repeat 130px 15px;}
+.dataIntRight .dataBox .tableTabs table td,.dataIntRight .dataBox .tableTabs .mainTable td{ width:11%;}
+.dataIntRight .dataBox .tableTabs table th,.dataIntRight .dataBox .tableTabs .mainTable th{ width:11%; color:#646e7e;}
+.dataIntRight .dataBox .tableTabs .tableMain{ height:260px; overflow:hidden; position:relative;}
+.dataIntRight .dataBox .tableTabs .tableMain table{ margin:0; border-left:1px solid #eef2f5;}
+.dataIntRight .dataBox .tableTabs .tableMain table a{ color:#4ba9df;}
+.dataIntRight .dataBox .dataTextArea{ width:798px; border:1px solid #eef2f5; padding:20px 30px; font-size:14px; color:#666;}
+.dataIntRight .dataBox .dataTextArea li{ margin-bottom:15px; overflow:hidden;}
+.dataIntRight .dataBox .dataTextArea li span{ display:block; float:left;}
+.dataIntRight .dataBox .dataTextArea li span.title{ width:120px;}
+.dataIntRight .dataBox .dataTextArea li span.detail{ width:440px;}
+.dataIntRight .dataBox .dataTextArea li button.modify{ display:inline-block; float:none; margin-left:15px; width:55px; height:25px; text-align:center; line-height:25px; background:#6BC74A; color:#FFF; border:1px solid #6BC74A; border-radius:2px; cursor:pointer;}
+.dataIntRight .dataBox .dataTextArea li button.modify.current{ background:#8ED55B; border:1px solid #8ED55B; color:#eee; cursor:inherit;}
+.dataIntRight .dataBox .dataTextArea li span font{margin-left:8px; padding:0px 4px; border:1px solid #e2e2e2; cursor:pointer; color:#4ba9df; font-size:12px;}
+.dataIntRight .dataBox .dataTextArea li span a{ color:#4ba9df;}
+.dataIntRight .dataBox .dataTextArea i{ cursor:pointer;}
+.dataIntRight .dataBox .dataTextArea i.current{ color:#4ba9df;}
+
+/*	register_center	*/
+.userCenter{ width:1150px; margin:0 auto; padding:35px 25px 50px; background:#eef2f5;}
+.userCenter h1{ font-size:18px; color:#333; margin-bottom:20px; font-weight:600;}
+.userCenter .userCenterBox{ padding:25px 30px; background:#FFF; margin-bottom:30px;}
+.userCenter .userCenterBox h2{ font-size:16px; color:#232323; position:relative;}
+.userCenter .userCenterBox h2 span{ position:absolute; display:block; width:125px; height:30px; text-align:center; font-size:14px; color:#fefefe; line-height:30px; cursor:pointer;}
+.userCenter .userCenterBox h2 span.modifyInfor{ background:#8ed65b; border:1px solid #8ed65b; border-radius:3px; top:0px; right:155px;}
+.userCenter .userCenterBox h2 span.modifyPw{ background:#4ba9df; border:1px solid #4ba9df; border-radius:3px; top:0px; right:0px;}
+.userCenter .userCenterBox .userDetial{ width:1028px; border:1px solid #eef2f5; margin-top:20px; padding:20px 30px; color:#666; font-size:14px;}
+.userCenter .userCenterBox .userDetial span{ display:inline-block; width:140px;}
+.userCenter .userCenterBox .userDetial li{ margin:10px 0; position:relative;}
+.userCenter .userCenterBox .userDetial li font{position:absolute; left:44%;padding:0px 4px; border:1px solid #e2e2e2; cursor:pointer; color:#4ba9df; font-size:12px;}
+.turnButton{ text-align:center; overflow:hidden; position:relative; width:1200px; height:35px; margin-top:30px;}
+.turnButton li{ width:125px; height:30px; margin-right:20px; float:left; line-height:30px; position:absolute; top:0px;}
+.turnButton li.goAppList{border:1px solid #4ba9df; border-radius:5px; background:#4ba9df; font-size:14px; left:38%;}
+.turnButton li.goAppList a{ color:#fefefe;}
+.turnButton li.pervStep{border:1px solid #818ea1; border-radius:5px; background:#818ea1; font-size:14px; left:51%;}
+.turnButton li.pervStep a{ color:#fefefe;}
+.turnButton li.goOtherPage{border:1px solid #4ba9df; border-radius:5px; background:#4ba9df; font-size:14px; left:42%;}
+.turnButton li.goOtherPage a{ color:#fefefe;}
+.turnButton li a{ display:inline-block; width:100%; height:100%;}
+.dialogPw{ display:none; min-width:475px; height:300px; padding:10px 15px; border:1px solid #FFF; border-radius:5px; z-index:100; background:#FFF; position:relative;}
+.pwCon{ display:none; width:450px; height:300px; padding:10px 15px; border:1px solid #FFF; border-radius:5px; z-index:100; background:#FFF; position:relative;}
+.pwCon h4{ font-size:18px; color:#0c72b8; margin-top:40px; margin-left:10px;}
+.pwCon p{ font-size:14px; color:#232323; margin-left:10px; margin-top:30px;}
+.userDialog ul{ margin-top:40px; margin-left:35px;}
+.userDialog ul li{ font-size:14px; color:#232323; margin-bottom:15px;}
+.userDialog ul li input{height:28px; border:1px solid #dcdcdc; border-radius:3px; margin-left:15px; width:194px; padding:0 8px; font-size:12px; color:#333;}
+.userDialog ul li label{ display:inline-block; width:75px; text-align:right; color:#333;}
+.userDialog ul li p{color:#818ea1; margin-left:86px; font-size:12px;}
+.userDialog ul li span{ color:#ff6666; font-size:12px; margin-left:6px;}
+.userDialog ul li span.errorSpan{ height:18px; width:18px; margin-right:5px; background:url(../image/ico.png) no-repeat -162px -35px; display:inline-block;}
+.userDialog ul li span.passSpan{ height:18px; width:18px; margin-right:5px; background:url(../image/ico.png) no-repeat -142px -35px; display:inline-block;}
+.dialogInfor{width:500px; height:360px; display:none; padding:10px 15px; border:1px solid #FFF; border-radius:5px; z-index:100; background:#FFF; position:relative;}
+.userDialog .dialogClose{ position:absolute; width:20px; height:20px; background:url(../image/ico.png) no-repeat 0px -212px; cursor:pointer; top:0px; right:0px;}
+.userDialog h6{ font-size:14px; color:#333; border-bottom:1px solid #eef2f5; text-align:center; padding-bottom:10px; position:relative;}
+.userDialog .confirm{ left:27%;}
+.userDialog .cancel{ left:48%;}
+.dialogInfor ul li i{ margin-left:10px; color:#818ea1;}
+
+/*	application_config	*/
+.config{ width:1150px; margin:0 auto; padding:35px 25px 50px; background:#eef2f5;}
+.config .dataTitle h2{ font-weight: normal; font-size: 18px; color: #333; margin-bottom: 20px; float:left;}
+.config .dataTitle h2 font.eventName{ color:#999; font-size:18px;}
+/*
+.config .dataTitle h2.h2Ico{ margin-left:10px;}
+.config .dataTitle h2.h2Ico span.ios{ font-size:14px; color:#646e7e; margin:0 10px;}
+.config .dataTitle h2.h2Ico span.ios font.ios{background:url(../image/ico.png) no-repeat -71px -52px; width:20px; height:20px; display:inline-block;}
+.config .dataTitle h2.h2Ico span.android{font-size:14px; color:#646e7e; margin:0 10px;}
+.config .dataTitle h2.h2Ico span.android font.android{ background:url(../image/ico.png) no-repeat -71px -30px; width:20px; height:20px; display:inline-block;}
+*/
+.config .dataTitle h3{margin-left:20px; float:left; height:30px; background:#4ba9df; cursor:pointer; width:80px; padding-left:40px; border:1px solid #4ba9df; border-radius:5px; color:#FFF; font-size:14px; line-height:30px; position:relative;}
+.config .dataTitle h3 i.iconfont{ margin:0 10px; background:url(../image/ico_2.png) no-repeat 0px -160px; display:inline-block; height:6px; width:10px;-ms-transform:rotate(0deg);-moz-transform:rotate(0deg);-webkit-transform:rotate(0deg); margin-bottom:0px;}
+.config .dataTitle h3.current i.iconfont{-ms-transform:rotate(180deg);-moz-transform:rotate(180deg);-webkit-transform:rotate(180deg); margin-bottom:3px;}
+.config .dataTitle h3 span.whiteAndroid{ margin-left:10px; width:20px; background:url(../image/ico.png) no-repeat -283px 0px; margin-right:10px; display:inline-block; height:20px; position:absolute; top:5px; left:0px;}
+.config .dataTitle h3 span.whiteIOS{ margin-left:10px; width:20px; background:url(../image/ico.png) no-repeat -283px -35px; margin-right:10px; display:inline-block; height:20px; position:absolute; top:5px; left:0px;}
+.config .eleHidden span.IOSIco{ background:url(../image/ico.png) no-repeat -71px -52px; width:20px; height:20px; display:inline-block; padding:0px; margin:0px; margin-right:10px; position:absolute; top:4px; left:10px;}
+.config .eleHidden span.androidIco{ background:url(../image/ico.png) no-repeat -71px -33px; width:20px; height:20px; display:inline-block; padding:0px; margin:0px; margin-right:10px; position:absolute; top:4px; left:10px;}
+.config .dataTitle h3 p{ width:80px; height:30px; border:1px solid #4ba9df;padding-left:40px; background:#FFF; text-align:left; line-height:30px; margin-top:-5px; z-index:99; margin-left:-41px; display:none; position:relative;}
+.config .dataTitle h3 p:hover{ background:#E8F5FE;}
+.config .dataTitle h3 p a{color:#818ea1; display:inline-block; width:100%; height:100%;}
+.config .configBox{padding:25px 30px; background:#FFF; margin-bottom:10px; font-size:14px;}
+.config .configBox h2{ font-size:16px; color:#232323; font-weight:600;}
+.config .configBox h2 span.modifyConfig{ margin-left:30px; padding:2px 5px; border:1px solid #e2e2e2; cursor:pointer; color:#4ba9df; font-size:12px; font-weight:normal;}
+.config .configBox h2 span.noUse{ margin-left:30px; padding:2px 5px; border:1px solid #e2e2e2; cursor:default; color:#e2e2e2; font-size:12px; font-weight:normal;}
+.config .configBox .configDetail{ width:1028px; border:1px solid #eef2f5; margin-top:20px; padding:20px 30px; color:#666; font-size:14px;}
+.config .configBox .configDetail li{ margin-bottom:10px; position:relative;}
+.config .configBox .configDetail li span{ display:inline-block; width:140px;}
+.config .configBox .configDetail li span.androidIco{background: url(../image/ico_2.png) no-repeat 0px -243px; padding-left:26px;}
+.config .configBox .configDetail li span.IOSIco{padding-left:26px;}
+.config .configBox .configDetail li font{position:absolute; left:56%;padding:0px 4px; border:1px solid #e2e2e2; cursor:pointer; color:#4ba9df; font-size:12px;}
+.config .configBox .configDetail li i{font-size:18px; margin-right:10px;}
+.config .configBox .configDetail li font.keyModify{position:absolute; left:56%;padding:0px 5px; border:1px solid #e2e2e2; cursor:pointer; color:#4ba9df; font-size:12px;}
+.config .configBox .configDetail li font.deleteApp{position:absolute; left:54%;padding:0px 4px; border:1px solid #e2e2e2; cursor:pointer; color:#4ba9df; font-size:12px;}
+.config .configBox .configDetail li font.noUse{position:absolute; left:54%;padding:0px 4px; border:1px solid #e2e2e2; color:#e2e2e2; font-size:12px; cursor:default;}
+.config .configBox .selfEventTable{ margin-top:20px; width:100%; border:1px solid #f6f6f6; color:#333; font-size:12px;}
+.config .configBox .selfEventTable a{ color:#e2e2e2; cursor:default;}
+.config .configBox .selfEventTable tr{ height:40px; border-top:1px solid #eef2f5;}
+.config .configBox .selfEventTable .trFirst{ background:#eef2f5; height:45px;}
+.config .configBox .selfEventTable tr td:nth-child(1){ padding-left:15px;}
+.configDialog{ display:none; background:#FFF; z-index:100; padding:10px 15px; border:1px solid #FFF; border-radius:5px; z-index:100; background:#FFF; position:relative;}
+.configDialog .dialogClose{ position:absolute; width:20px; height:20px; background:url(../image/ico.png) no-repeat 0px -212px; cursor:pointer; top:0px; right:0px;}
+.configDialog h6{ font-size:14px; color:#333; border-bottom:1px solid #eef2f5; text-align:center; padding-bottom:10px; position:relative;}
+.uploadDialog{ width:500px;}
+.uploadDialog p{ position:relative;}
+.uploadDialog input[type='file']{ opacity: 0; filter: alpha(opacity=0); display:none;}
+.uploadFont{ padding:6px 8px; border:1px solid #e2e2e2; cursor:pointer; color:#4ba9df; font-size:12px; font-weight:normal; margin-left:10px;}
+.uploadDialog p i{ color:#818ea1; margin-left:80px;}
+.configDialog h4{ font-size:18px; color:#0c72b8; margin:35px 0; margin-left:50px;}
+.configDialog p{ margin-left:50px; margin-bottom:15px;}
+.configDialog p label{ color:#232323; font-size:14px; margin-right:10px;}
+.configDialog p input[type='password'],.configDialog p input[type='text']{ height:28px; border:1px solid #dcdcdc; width:180px; padding-left:5px; color:#232323;}
+.configDialog .notice{ color:#ff6c00; margin-top:25px;}
+.configDialog .confirm{ left:28%;}
+.configDialog .cancel{ left:48%;}
+.delAppDialog{ width:520px; height:300px;}
+.delAppDialog input[type='text']{ height:33px; width:143px;}
+.delAppDialog .idcodeImg{ display:block; float:left; width:75px; height:35px; background:#7dbfe8; margin-left:5px; border:1px solid #7dbfe8; border-radius:3px; line-height:38px; text-align:center; color:#FFF; font-size:20px; cursor:pointer;}
+.delAppDialog p.idcode{ overflow:hidden;}
+.delAppDialog p.idcode label{ height:33px; line-height:33px;}
+.delAppDialog p.idcode label,.delAppDialog p.idcode input{float:left; display:block;}
+.delEventDialog h4{ margin-left:25px;}
+.modifyDialog{ width:580px; height:445px;}
+.modifyDialog h4{ margin-left:40px;}
+.modifyDialog table{ margin-left:40px; width:100%; font-size:14px; color:#232323;}
+.modifyDialog table tr{height:40px;}
+.modifyDialog table tr td{ width:25%;}
+.modifyDialog p.notice{ margin:0px 40px;}
+.modifyDialog .slideNumber{ width:200px;}
+.modifyDialog .conSlide{ position:relative; height:45px;}
+.modifyDialog .conSlide input#amount{ position:absolute; top:0px; right:300px; color:#646e7e; border:0; width:50px;}
+.modifyDialog .conSlide font{ font-size:12px; color:#646e7e;}
+.modifyDialog .conSlide font.minNum{ position:absolute; bottom:0px; left:-10px;}
+.modifyDialog .conSlide font.maxNum{ position:absolute; bottom:0px; right:215px;}
+
+/*	register_info	*/
+.userCenterBox h2 font{ font-size:12px; color:#818ea1; margin-left:8px;}
+.userCenterBox ul.operationIco{ overflow:hidden; margin-top:30px;}
+.userCenterBox ul.operationIco li{ float:left; margin-right:60px; width:75px; text-align:center;}
+.userCenterBox ul.operationIco li a{ display:block; width:75px; padding-top:85px; height:25px; color:#4ba9df; font-size:14px;}
+.userCenterBox ul.operationIco li.addApp a{background:url(../image/operationIco.png) no-repeat 0px 0px;}
+.userCenterBox ul.operationIco li.SDKdown a{background:url(../image/operationIco.png) no-repeat -125px 0px;}
+.userCenterBox ul.operationIco li.manageApp a{background:url(../image/operationIco.png) no-repeat 0px -125px;}
+.userCenterBox ul.operationIco li.help a{background:url(../image/operationIco.png) no-repeat -125px -125px;}
+
+/*	error_page	*/
+.errorPage{ width:1200px; position:relative; margin:0 auto; background:#FFF; min-height:418px;}
+.errorPic{ width:600px; height:295px; margin:0 auto;}
+.error404{background:url(../image/errorPic.png) no-repeat 0px 0px;}
+.errorPage h1{ text-align:center; font-size:18px; color:#333; margin:10px auto;}
+.errorPage h2{text-align:center; font-size:14px; color:#666;}
+.errorPage h2 a{ color:#4ba9df;}
+.construction{background:url(../image/errorPic.png) no-repeat 0px -315px;}
+
+/*	data_usercharacter	*/
+.userProDialog{display:none; width:550px; background:#FFF; z-index:1000; padding:10px 15px; border:1px solid #FFF; border-radius:5px; background:#FFF; position:relative;}
+.userProDialog .dialogClose{ position:absolute; width:20px; height:20px; background:url(../image/ico.png) no-repeat 0px -212px; cursor:pointer; top:0px; right:0px;}
+.userProDialog h6{ font-size:14px; color:#333; border-bottom:1px solid #eef2f5; text-align:center; padding-bottom:10px; position:relative;}
+.userProDialog h4{ font-size:18px; color:#0c72b8; margin:35px 0; margin-left:25px;}
+.userProDialog .confirm{ left:42%;}
+.userPro .labelUl{ margin-top:40px;}
+.userPro .labelUl,.userPro .labelRadio{ overflow:hidden;}
+.userPro .labelUl li,.userPro .labelRadio li{ float:left; width:125px; text-align:center;}
+.userPro .labelRadio li span{ font-size:12px; color:#646e7e; padding-left:20px; background:url(../image/ico.png) no-repeat -283px -247px; cursor:pointer;}
+.userPro .labelRadio li span input[type='radio']{ display:none;}
+.userPro .labelRadio li span.current{background:url(../image/ico.png) no-repeat -283px -229px;}
+.userProDialog h5{ font-size:18px; color:#0c72b8; margin-top:40px; margin-left:100px; margin-bottom:20px;}
+.userProDialog p{ margin-bottom:14px; margin-left:100px; font-size:14px; color:#333;}
+
+/*	user_label	*/
+.dataBox h3 span.addNewLabel{position:absolute; right:0px; background:#8ed65b; border:1px solid #8ed65b; border-radius:3px; height:30px; line-height:30px; color:#FFF; font-size:14px; width:135px; text-align:center; cursor:pointer;}
+a.btnDelLabel{ color:#ff6666; cursor:pointer; }
+.labelDialog{display:none; background:#FFF; z-index:100; padding:10px 15px; border:1px solid #FFF; border-radius:5px; z-index:100; background:#FFF; position:relative;}
+.labelDialog h6{ font-size:14px; color:#333; border-bottom:1px solid #eef2f5; text-align:center; padding-bottom:10px; position:relative;}
+.labelDialog h4{ font-size:18px; color:#333; text-align:center; margin-top:30px;}
+.labelDialog .confirm{ left:31%;}
+.labelDialog .cancel{ left:52%;}
+.userLabelTabs table{border:1px solid #eef2f5;table-layout:fixed;}
+.userLabelTabs table td{ border-bottom:1px solid #eef2f5; border-right:1px solid #eef2f5; padding:3px 0px;}
+.userLabelTabs table th{ color:#646e7e; width:0px;}
+.userLabelTabs{ font-size:12px;}
+.userLabelTabs td img{ width:20px; height:20px; float:left; margin:15px 5px 16px 8px;}
+.userLabelTabs td font{ display:inline-block; height:49px; line-height:49px; float:left;}
+.userLabelTable table td{ width:0px; padding:3px 0px;}
+.userLabelTable table td.textCenter{ width:260px; word-wrap:break-word;}
+.userLabelTable table td p{ width:240px; margin:0 auto;}
+.delLabel{ width:520px; height:300px;}
+.delLabelCon{ width:520px;}
+.delLabelCon h4{ color:#0c72b8; font-size:18px;}
+.delLabelCon p{ font-size:14px; margin-top:25px; text-align:center;}
+.delLabel input{ margin-left:60px; width:108px; height:38px; line-height:38px; padding:0px 5px; border:1px solid #DFDFDF; float:left; margin-top:25px;}
+.delLabel span.idcodeImg{ margin-left:10px; height:40px; line-height:40px; margin-top:25px;}
+.delLabel span.idcodeImg{ display:block; float:left; width:81px; height:38px; background:#7dbfe8; margin-left:5px; border:1px solid #7dbfe8; border-radius:5px; line-height:38px; text-align:center; color:#FFF; font-size:20px; cursor:pointer; overflow:hidden; position:relative;}
+.delLabel span.spanCover{ display:none; position:absolute; width:81px; height:40px; line-height:80px; top:0px; left:0px; font-size:20px; background:#999; opacity: .5;filter: Alpha(Opacity=50); border:1px solid #999; border-radius:5px; z-index:50;}
+.delLabel span.reflashCode{ display:none; position:absolute; width:81px; height:38px; left:0px; font-size:14px; top:0px; color:#FFF; line-height:38px; text-align:center; z-index:99; cursor:pointer;}
+.delLabel p{ color:#FF6100; margin-left:60px; margin-top:80px;}
+.addLabel{ width:710px;}
+.addLabel p.addText{ margin:20px 35px; color:#232323; margin-top:35px;}
+.addLabel table{ width:645px; margin:0 auto; margin-bottom:35px;}
+.addLabel table td{ padding:10px 0px;}
+.addLabel table div font{ font-size:14px; color:#232323;}
+.addLabel .btnAddLabel{ text-align:center;}
+.addLabel .btnAddLabel button{ width:90px; height:30px; border:1px solid #8ed65b; background:#8ed65b; border-radius:3px; color:#FFF; font-size:14px; line-height:28px; cursor:pointer;}
+.addLabel .btnAddLabel button.disabled{ background:#ababab; border:1px solid #ababab; cursor:default;}
+.addSysLabel{ display:none; width:548px;}
+.addSysLabel p{ margin-top:35px; text-align:center; color:#232323; font-size:14px;}
+.addSysLabel ul.labelUl{ overflow:hidden; margin-left:60px; margin-top:15px; min-height:90px;}
+.addSysLabel ul.labelUl.shortUl{ margin-left:170px;}
+.addSysLabel ul.labelUl li{ float:left; width:95px; text-align:center; margin-right:15px;}
+.addSysLabel ul.labelUl li p{ margin-top:10px; margin-left:0px; font-size:12px; color:#666;}
+.addSysLabel ul.labelUl li p input[type='checkbox']{ display:none;}
+.addSysLabel ul.labelUl li p .checkBox{ width:10px; height:10px; border:1px solid #cdd2da; display:inline-block; margin-right:5px;}
+.addSysLabel ul.labelUl li p .checkBox.current{ background:url(../image/ico.png) no-repeat 0px -270px;}
+.addSysLabel .confirm{ left:42%;}
+.addSysLabelCon{ display:none; width:548px;}
+.addSysLabelCon h6 span.questionIco{display:inline-block; width:16px; height:16px; background:url(../image/ico.png) no-repeat -1px -177px; margin-left:6px; cursor:pointer;}
+.addSysLabelCon p{ margin-top:35px; margin-left:40px; color:#232323; font-size:14px;}
+.addSysLabelCon ul.labelUl{ overflow:hidden; margin-left:40px; margin-top:15px; margin-bottom:25px;}
+.addSysLabelCon ul.labelUl li{ float:left; width:95px; text-align:center; margin-right:15px;}
+.addSysLabelCon ul.labelUl li p{ margin-top:10px; margin-left:0px; font-size:12px; color:#666;}
+.addSysLabelCon span{ display:block; margin-left:35px; margin-top:8px; color:#232323; font-size:14px;}
+.addSysLabelCon .confirm{ left:48%;}
+.addSysLabelCon input[type='checkbox']{ display:none;}
+.addSysLabelCon .previous{ left:28%;}
+.filterLabel{ width:550px; height:auto !important;}
+.labelDialog h5{ height:50px; width:470px; margin:0 auto; margin-top:25px; margin-bottom:5px;}
+.filterLabel h5{ background:url(../image/newAppDialogIco.png) no-repeat 0px -70px;}
+.filterTab{ width:505px; margin-top:35px; margin-left:35px;}
+.filterLabel .filterTab th{ color:#232323; font-size:14px;}
+.filterLabel .filterTab p{ position:relative; width:166px; float:left;}
+.filterLabel .filterTab p font{top:15px; right:5px; position:absolute; display:block; width:10px; height:10px; background:url(../image/ico.png) no-repeat -124px -17px;}
+.filterLabel .filterTab p span{ display:none; position:absolute; width:150px; padding:0px 8px; min-height:20px; border:1px solid #dcdcdc; top:31px; left:0px; background:#FFF; z-index:999;}
+.filterLabel .filterTab p span i{ display:block; height:25px; line-height:25px; color:#232323; font-size:14px; cursor:pointer;}
+.filterLabel .filterTab p span i:hover{ background:#E8E7E7}
+.filterLabel .filterTab td span.delFilBtn{width:28px; height:29px; display:inline-block; border:1px solid #dcdcdc; margin-left:5px; text-align:center; font-size:16px; color:#3399cc; font-weight:500; cursor:pointer; float:left;}
+.filterLabel .filterTab input[type='text']{ width:150px; height:30px; line-height:30px; border:1px solid #dcdcdc; border-radius:2px; cursor:pointer; padding:0px 8px; color:#232323;}
+.filterLabel .filterTab input[type='text'].filterInput{ width:199px; cursor:text; display:inline-block;}
+.filterLabel span.addFilBtn{ display:inline-block; width:105px; height:30px; line-height:30px; background:#8ed65b; border:1px solid #8ed65b; border-radius:3px; cursor:pointer;color:#FFF; text-align:center; font-size:14px; margin-left:40px; margin-top:5px;}
+.filterLabel span.filBtnNot{ font-size:12px; color:#999; margin-left:10px;}
+.filterLabel div.FilLabRule{ margin-left:40px; margin-top:15px; color:#232323; font-size:14px; line-height:40px; overflow:hidden;}
+.filterLabel div.FilLabRule label{ display:block; height:30px; line-height:30px; float:left;}
+.filterLabel div.FilLabRule .FilLabBox{ height:30px; width:100px; border:1px solid #8ed65b; border-radius:3px; background:#FFF; font-size:14px; color:#FFF; float:left; cursor:pointer;}
+.filterLabel div.FilLabRule .FilLabBox span.FilLabTabs{ width:50px; background:#8ed65b; height:30px; display:block; line-height:30px; text-align:center;}
+.filterLabel div.FilLabRule input[type='radio']{ display:none;}
+.filterLabel div.FilLabRule p{ margin-left:68px; font-size:12px; color:#ff6c00; float:left;}
+.filterLabel .confirm{ left:42%;}
+.filterLabel2{ width:560px; min-height:395px;}
+.filterLabel2 h5{ background:url(../image/newAppDialogIco.png) no-repeat 0px -140px;}
+.filterLabel2 div.filTextTab{ width:430px; margin:15px auto; font-size:14px; color:#232323; overflow:hidden; margin-top:50px;}
+.filterLabel2 div.filTextTab .filTextL{ width:80px; float:left;}
+.filterLabel2 div.filTextTab .filTextR{ width:350px; float:left;}
+.filterLabel2 div.filTextTab .filTextR p{ margin-bottom:10px;}
+.filterLabel2 p.filLabName{ margin-left:65px; font-size:14px; color:#232323;}
+.filterLabel2 p.filLabName input{ width:250px; height:28px; line-height:30px; border:1px solid #dcdcdc; border-radius:2px; cursor:text; padding:0px 8px; color:#232323;}
+.filterLabel2 p.filLabNotice{ margin-left:65px; font-size:14px; color:#232323; margin-top:15px;}
+.filterLabel2 p.filLabNotice input{ width:250px; height:28px; line-height:30px; border:1px solid #dcdcdc; border-radius:2px; cursor:text; padding:0px 8px; color:#232323;}
+.filterLabel2 .previous{ left:28%; bottom:0px;}
+.filterLabel2 .confirm{ left:48%; bottom:0px;}
+.filterLabel3{ width:550px; height:400px;}
+.filterLabel3 h5{ background:url(../image/newAppDialogIco.png) no-repeat 0px -211px;}
+.filterLabel3 h4{ margin-left:40px; font-size:14px; color:#232323; text-align:left; margin-top:30px;}
+.filterLabel3 .imgShowBox{ overflow:hidden; margin-left:40px; margin-top:15px;}
+.filterLabel3 .imgShowBox .imgShow{ float:left; width:60px; height:80px; background:url(../image/user_profile_4.png) no-repeat; position:relative;}
+.filterLabel3 .imgShowBox .imgShow img{ position:absolute; top:0px;}
+.filterLabel3 .imgShowBox .imgShow p{ width:60px; text-align:center; font-size:12px; color:#999; margin-top:65px;}
+.filterLabel3 .imgShowBox .imgContent{ float:left; width:435px; margin-left:15px;}
+.filterLabel3 .imgShowBox .imgContent p{ position:relative;}
+.filterLabel3 .imgShowBox .imgContent p label{ font-size:14px; color:#232323; margin-left:10px;}
+.filterLabel3 .imgShowBox .imgContent p font{ border:1px solid #dcdcdc; padding:6px 8px; cursor:pointer; color:#999;}
+.filterLabel3 .imgShowBox .imgContent p input[type='radio']{display:none;}
+.filterLabel3 .imgShowBox .imgContent p input[type='text']{ width:182px; height:28px; padding:0px 8px; line-height:28px; border:1px solid #dcdcdc; font-size:12px; color:#232323;}
+.filterLabel3 .imgShowBox .imgContent p input[type='file']{ position:absolute; display:none;}
+.filterLabel3 .imgShowBox .imgContent p.notice{ font-size:12px; color:#818ea1; margin-left:10px; margin-top:5px;}
+.filterLabel3 .imgShowBox .imgContent span input{ display:none;}
+.filterLabel3 .imgShowBox .imgContent span label{ color:#232323; margin-left:5px;}
+.filterLabel3 .imgShowBox .imgContent span.checkButton{ margin-top:15px; margin-left:10px; font-size:14px; color:#646e7e; padding-left:20px; background:url(../image/ico.png) no-repeat -283px -248px; cursor:pointer;}
+.filterLabel3 .imgShowBox .imgContent span.checkButtonCurret{background:url(../image/ico.png) no-repeat -283px -228px;}
+.filterLabel3 .previous{ left:28%;}
+.filterLabel3 .confirm{ left:48%;}
+.filterLabel4{ width:560px; min-height:395px;}
+.filterLabel4 h5{ background:url(../image/newAppDialogIco.png) no-repeat 0px -282px;}
+.filterLabel4 h4{ font-size:18px; color:#0c72b8; margin-left:40px; margin-top:35px; text-align:left; margin-bottom:25px;}
+.filterLabel4 p{ margin-left:40px; margin-bottom:10px; color:#232323; font-size:14px;}
+.filterLabel4 .confirm{ left:42%;}
+
+/*	text_message	*/
+.pushedRight{ float: left; width: 920px; padding: 34px 40px 40px;}
+.pushedRight .pushedTitle{ position:relative;}
+.pushedRight .pushedTitle h2{ font-size:18px; font-weight:600; color:#333;}
+.pushedRight .pushedTitle h2 font{ color:#646e7e; font-weight:normal; margin-left:10px;}
+.pushedRight .pushedTitle h2 span{ font-size:14px; font-weight:normal; color:#646e7e;}
+/*
+.pushedRight .pushedTitle h2 span.ios{ margin-left: 10px; font-size:14px; color:#646e7e; padding-left:20px; background:url(../image/ico.png) no-repeat -71px -53px;}
+.pushedRight .pushedTitle h2.h2Ico span.ios{ margin:0px; background:none;}
+.pushedRight .pushedTitle h2 span.ios font.ios{background:url(../image/ico.png) no-repeat -71px -52px; width:20px; height:20px; display:inline-block;}
+.pushedRight .pushedTitle h2 span.android{ margin-left:10px; font-size:14px; color:#646e7e; padding-left:20px; background:url(../image/ico.png) no-repeat -71px -33px;}
+.pushedRight .pushedTitle h2.h2Ico span.android{ margin:0px; background:none;} 
+.pushedRight .pushedTitle h2 span.android font.android{ background:url(../image/ico.png) no-repeat -71px -30px; width:20px; height:20px; display:inline-block;}*/
+
+.pushedRight .pushedTitle .saveDraft{ right:100px; border:1px solid #8ed65b; border-radius:3px; background:#8ed65b;}
+.pushedRight .pushedTitle .dataPush{ right:0px; border:1px solid #4ba9df; border-radius:3px; background:#4ba9df;}
+.pushedRight .pushedTitle .dataPush,.pushedRight .pushedTitle .saveDraft{ position:absolute; top:0px; width:85px; height:30px; line-height:28px; color:#fefefe; font-size:14px; text-align:center; cursor:pointer;}
+.pushedRight .pushedBox{ width:100%; background:#eef2f5; overflow:hidden; margin-top:20px;}
+.pushedRight .pushedBox .leftSlide{ width:300px; margin-right:10px; float:left; background:#FFF; padding:25px 30px;}
+.pushedRight .pushedBox .leftSlide h4{ font-size:14px; color:#333;}
+.pushedRight .pushedBox .leftSlide .slide{ width:360px; margin-left:-30px; height:300px; overflow:hidden; position:relative;}
+.pushedRight .pushedBox .leftSlide .slide ul{position:absolute; width:1080px; left:0px;}
+.pushedRight .pushedBox .leftSlide .slide ul li{ float:left; width:360px; height:300px; position:relative;}
+.pushedRight .pushedBox .leftSlide .slide ul li span{ position:absolute; color:#FFF; display:block;}
+.pushedRight .pushedBox .leftSlide .slide ul li.mobileAndroid span{ top:196px; left:118px; width:118px; overflow:hidden; height:20px;}
+.pushedRight .pushedBox .leftSlide a{ position:absolute;top:137px;display:block;width:14px;height:45px; cursor:pointer; z-index:100;}
+.pushedRight .pushedBox .leftSlide a.prev{ left:13px; background:url(../image/ico.png) no-repeat -71px -142px;}
+.pushedRight .pushedBox .leftSlide a.next{ right:13px; background:url(../image/ico.png) no-repeat -89px -142px;}
+.pushedRight .pushedBox .rightCon{ width:490px; float:left; background:#FFF; padding:25px 30px;}
+.pushedRight .pushedBox .rightCon h4{ font-size:14px; color:#333; }
+.pushedRight .pushedBox .rightCon h5{font-size:14px; color:#333; margin-top:30px; margin-bottom:15px;}
+.inputTextTabs{ width:465px; border:1px solid #e9ebee; position:relative; padding:15px 10px;}
+.inputTextTabs .topTri{ display:block; width:10px; height:5px; background:url(../image/ico.png) no-repeat -108px -16px; position:absolute; top:-5px; left:35px; }
+.inputTextTabs input[type='text']{ border:1px solid #abd7f0; height:28px; line-height:28px; padding:0 8px; width:400px; position:relative;}
+.inputTextTabs i{ position:absolute; font-size:12px; color:#999; top:21px; right:21px;}
+.inputTextTabs label{ color:#646e7e; font-size:14px; margin-right:10px;}
+.inputTextTabs font{ margin-left:40px; color:red;}
+.pushedRight .pushedBox .rightCon p .radioButton{ background:url(../image/ico.png) no-repeat -283px -244px; margin-right:35px;}	/*	按钮样式	*/
+.pushedRight .pushedBox .rightCon p .radioButtonCurrent{ background:url(../image/ico.png) no-repeat -283px -226px;}
+.inputImgTabs{ display:none; width:465px; border:1px solid #e9ebee; position:relative; padding:15px 10px;}
+.inputImgTabs .topTri{ display:block; width:10px; height:5px; background:url(../image/ico.png) no-repeat -108px -16px; position:absolute; top:-5px; left:135px; }
+.inputImgTabs label{ color:#646e7e; font-size:14px; margin-right:10px;}
+.inputImgTabs input[type='text']{ border:1px solid #abd7f0; height:28px; line-height:28px; padding:0 8px; width:350px; position:relative; color:#646e7e;}
+.inputImgTabs font{ color:#4ba9df; font-size:12px; padding:2px 4px; border:1px solid #abd7f0; cursor:pointer;}
+.inputImgTabs input[type='file']{ position:absolute; top:20px; right:-165px; opacity: 0;filter: Alpha(Opacity=0); }
+.inputImgTabs b{ font-weight:normal; margin-left:40px; color:#646e7e; font-family:Arial,"Microsoft YaHei";}
+.pushedRight .pushedBox .rightCon p span input[type='radio']{ display:none;}
+.pushedRight .pushedBox .rightCon p span.checkButton{background:url(../image/ico.png) no-repeat -283px -244px; margin-left:-3px;}
+.pushedRight .pushedBox .rightCon p span.checkButtonCurret{background:url(../image/ico.png) no-repeat -283px -226px;}
+.pushedRight .pushedBox .rightCon p{ margin-left:25px; margin-bottom:10px;} 
+.pushedRight .pushedBox .rightCon p.equip label{ margin-right:20px;}
+.pushedRight .pushedBox .rightCon p.nextStep span{ margin-left:0px;}
+.pushedRight .pushedBox .rightCon p.nextStep label{ margin-right:10px;}
+.pushedRight .pushedBox .rightCon p span{ margin-top:15px; margin-left:10px; font-size:14px; color:#646e7e; padding-left:20px; background:url(../image/ico.png) no-repeat -71px -33px; cursor:pointer;}
+.pushedRight .pushedBox .rightCon p span.IOS{ background:url(../image/ico.png) no-repeat -71px -53px;}
+.pushedRight .pushedBox .rightCon p label{ margin-right:44px; font-size:14px; color:#646e7e;}
+.pushedRight .pushedBox .rightCon h5.moreSet{ cursor:pointer; border-bottom:1px solid #f6f6f6;}
+.bottom_tri{ background:url(../image/ico.png) no-repeat -124px -18px; display:inline-block; width:8px; height:8px; margin-left:15px;}
+.pushedRight .pushedBox .rightCon .cacheSet{ display:none;}
+.pushedRight .pushedBox .rightCon .cacheSet p{ font-size:14px; color:#333;}
+.pushedRight .pushedBox .rightCon .cacheSet p input[type='radio']{ margin-bottom:10px;}
+.pushedRight .pushedBox .rightCon .cacheSet p font{ margin-left:30px;}
+.pushedRight .pushedBox .rightCon .cacheSet p font i{ font-size:12px; color:#999;}
+.pushedRight .pushedBox .rightCon .cacheSet p.cacheList{ margin-left:25px;}
+.pushedRight .pushedBox .rightCon .cacheSet p.cacheList label{ color:#333;}
+.userTagList{ width:200px; border:1px solid #e9ebee; position:relative; margin-left:120px; display:none;}	/*	标签用户下拉	*/
+.userTagList span.topTri{ display:block; width:10px; height:5px; background:url(../image/ico.png) no-repeat -108px -16px; position:absolute; top:-5px; left:35px; }
+.userTagList b{ margin-top:10px; margin-left:10px;}
+.userTagList ul{ height:90px; overflow-y:auto;}
+.userTagList ul li{ margin-top:5px; margin-left:10px;}
+.allTaglist{ width:475px; border:1px solid #e9ebee; position:relative; padding:15px 10px; display:none;}/*	批量下拉*/
+.allTaglist span.topTri{ display:block; width:10px; height:5px; background:url(../image/ico.png) no-repeat -108px -16px; position:absolute; top:-5px; left:280px; }
+.allTaglist label{ color:#646e7e; font-size:14px; margin-right:10px;}
+.allTaglist input[type='text']{ border:1px solid #abd7f0; height:28px; line-height:28px; padding:0 8px; width:300px; position:relative;}
+.allTaglist font{ color:#4ba9df; font-size:12px; padding:2px 4px; border:1px solid #abd7f0; cursor:pointer;}
+.allTaglist input[type='file']{ position:absolute; top:20px; right:-130px; opacity: 0;filter: Alpha(Opacity=0); }
+.allTaglist b{ font-weight:normal; margin-left:70px; color:#646e7e; font-family:Arial,"Microsoft YaHei";}
+.userArea b.inputNull{ color:red;}
+.speTaglist{ width:400px; border:1px solid #e9ebee; position:relative; padding:15px 10px; display:none; margin-left:80px;}
+.speTaglist span.topTri{ display:block; width:10px; height:5px; background:url(../image/ico.png) no-repeat -108px -16px; position:absolute; top:-5px; left:280px; }
+.speTaglist label{ color:#646e7e; font-size:14px; margin-right:10px;}
+.speTaglist input[type='text']{ border:1px solid #abd7f0; height:28px; line-height:28px; padding:0 8px; width:300px; position:relative;}
+.speTaglist font{ color:#4ba9df; font-size:12px; padding:2px 4px; border:1px solid #abd7f0; cursor:pointer;}
+.speTaglist b{ font-weight:normal; margin-left:58px; color:#646e7e; font-family:Arial,"Microsoft YaHei";}
+.wittingTime,.cacheTime,.cacheTimeSelect{ width:174px; height:30px; border:1px solid #ebebeb; border-radius:1px; padding:0px 8px; font-size:14px; color:#666; margin-left:-30px; cursor:pointer;}
+.cacheTimeSelect{ width:74px;}
+
+/*	用户点击通知后续动作下拉	*/
+.nextArea label{ color:#646e7e; font-size:14px; margin-right:10px;}
+.nextArea input[type='text']{ border:1px solid #abd7f0; height:28px; line-height:28px; padding:0 8px; width:300px; position:relative;}
+.nextArea b.inputNull{ font-weight:normal; margin-left:58px; color:red; font-family:Arial,"Microsoft YaHei";}
+.openUrl{ display:none; width:380px; border:1px solid #e9ebee; position:relative; padding:15px 10px; margin-left:80px;}
+.openUrl span.topTri{ display:block; width:10px; height:5px; background:url(../image/ico.png) no-repeat -108px -16px; position:absolute; top:-5px; left:60px; }
+.selfNotice{ display:none; border:1px solid #e9ebee; position:relative; padding:15px 10px; margin-left:80px; width:400px;}
+.selfNotice span.topTri{ display:block; width:10px; height:5px; background:url(../image/ico.png) no-repeat -108px -16px; position:absolute; top:-5px; left:220px; }
+.selfNotice textarea{ width:388px; height:48px; border:1px solid #a5d4ef; border-radius:1px; font-size:14px; font-family:Arial,'Microsoft YaHei'; padding:6px; color:#646e7e;}
+.selfNotice b{ margin-left:0px; color:#646e7e; font-family:Arial,"Microsoft YaHei";}
+.selfNotice b.inputNull{ margin-left:0px;}
+.selfNotice font{ position:absolute; color:#646e7e; top:55px; right:15px;}
+.openApp{ display:none; border:1px solid #e9ebee; position:relative; padding:15px 10px; margin-left:80px; width:380px;}
+.openApp span.topTri{ display:block; width:10px; height:5px; background:url(../image/ico.png) no-repeat -108px -16px; position:absolute; top:-5px; left:330px; }
+.openApp input[type='text']{ border:1px solid #abd7f0; height:28px; line-height:28px; padding:0 8px; width:290px; position:relative;}
+.openApp b.inputNull{ margin-left:68px;}
+
+/*	push_effect	*/
+.pushedRight .pushedTitle h2{ font-weight: normal; font-size: 18px; color: #333; margin-bottom: 20px; float:left;}
+.pushedRight .pushedTitle font.android{  background:url(../image/ico.png) no-repeat -71px -30px; width:20px; height:20px; display:inline-block;}
+.pushedRight .pushedTitle font.ios{ background:url(../image/ico.png) no-repeat -71px -52px; width:20px; height:20px; display:inline-block;}
+.pushedRight .pushedTitle h3{margin-left:20px; float:left; height:30px; background:#4ba9df; cursor:pointer; width:90px; padding-left:30px; border:1px solid #4ba9df; border-radius:5px; color:#FFF; font-size:14px; line-height:30px; position:relative;}
+.pushedRight .pushedTitle h3 i.iconfont{ margin:0 5px; background:url(../image/ico_2.png) no-repeat 0px -160px; display:inline-block; height:6px; width:10px;-ms-transform:rotate(0deg);-moz-transform:rotate(0deg);-webkit-transform:rotate(0deg); margin-bottom:0px;}
+.pushedRight .pushedTitle h3.current i.iconfont{-ms-transform:rotate(180deg);-moz-transform:rotate(180deg);-webkit-transform:rotate(180deg); margin-bottom:3px;}
+.pushedRight .pushedTitle h3 p{ width:90px; height:30px; border:1px solid #4ba9df;padding-left:30px; background:#FFF; text-align:left; line-height:30px; margin-top:-5px; z-index:99; margin-left:-31px; display:none; position:relative;}
+.pushedRight .pushedTitle h3 p:hover{ background:#E8F5FE;}
+.pushedRight .pushedTitle h3 p a{color:#818ea1; display:inline-block; width:100%; height:100%;}
+.pushedRight .pushedTitle h3 span.whiteAndroid{ margin-left:10px; width:20px; background:url(../image/ico.png) no-repeat -283px 0px; margin-right:10px; display:inline-block; height:20px; position:absolute; top:5px; left:0px;}
+.pushedRight .pushedTitle h3 span.whiteIOS{ margin-left:10px; width:20px; background:url(../image/ico.png) no-repeat -283px -35px; margin-right:10px; display:inline-block; height:20px; position:absolute; top:5px; left:0px;}
+.eleHidden span.IOSIco{ background:url(../image/ico.png) no-repeat -71px -52px; width:20px; height:20px; display:inline-block; padding:0px; margin:0px; margin-right:10px; position:absolute; top:4px; left:10px;}
+.eleHidden span.androidIco{ background:url(../image/ico.png) no-repeat -71px -33px; width:20px; height:20px; display:inline-block; padding:0px; margin:0px; margin-right:10px; position:absolute; top:4px; left:10px;}
+.pushedRight .reset{ background:#FFF; margin-top:0px; padding:25px 30px; width:860px; margin-bottom:10px;}
+.pushedRight .reset h3{ font-size: 16px; color: #232323; margin-bottom: 20px; position:relative;}
+.pushedRight .reset h3 span{ color: #818ea1; font-size: 12px; margin-left: 10px;}
+.pushedRight .reset h3 span.dataDownload{position:absolute; right:15px; background:url(../image/ico.png) no-repeat -233px 0px; height:16px; width:50px; padding-left:20px;}
+.pushedRight .reset h3 span.dataDownload a{ color:#4ba9df;}
+.pushedRight .reset table tr.trFirst{ height:45px; text-align:center;}
+.pushedRight .reset div.tableMain { overflow:hidden; position:relative;}
+.pushedRight .reset div.tableMain a{ margin-left:10px; color:#4ba9df; cursor:pointer;}
+.pushedRight .reset div.tableMain table{ color:#646e7e; font-size:12px; text-align:center; border:1px solid #eef2f5; table-layout:fixed;}
+.pushedRight .reset div.tableMain table tr{ height:40px; border-bottom:1px solid #eef2f5;}
+.pushedRight .reset div.tableMain table tr td{ border:1px solid #eef2f5;}
+.pushSelect{ position:relative; z-index:120;}
+.pushSelect span{ font-size:14px; color:#666; float:left; margin-right:10px;}
+.pushedRight .pushArea{border:1px solid #dfdfdf; height:28px; width:320px;  float:left;cursor:pointer; line-height:28px; color:#666;}
+.pushArea .pushIco{ width:29px; border-left:1px solid #dfdfdf; float:left; height:28px; line-height:28px; text-align:center; font-size:12px; color:#666;}
+.pushArea .pushShow{ width:280px; float:left; height:28px;font-size:14px; padding-left:10px;}
+.pushArea ul.pushList{ display:none; margin-top:29px; background:#FFF; z-index:100; height:290px; overflow-y:scroll; overflow-x:hidden; margin-left:-1px;}
+.pushedRight .pushArea ul.pushList li{ font-size:12px; width:100%; border:1px solid #dfdfdf; background:#FFF; margin-left:0px; border-top:0; border-radius:0; padding-left:10px; color:#666; text-align:left; z-index:101;}
+.pushedRight .pushArea ul.pushList li:hover,.pushedRight .compareSelect ul.comList li:hover{ background:#E8E7E7;}
+.pushImgArea{ margin-top:20px; position:relative;}
+.pushImgArea .pushButton{ border-bottom:1px solid #e8f5fe; position:relative; overflow:hidden;}
+.pushImgArea .pushButton li{ float:left; height:30px; width:150px; border:1px solid #e8f5fe; border-bottom:0; line-height:30px; background:#e8f5fe; text-align:center; font-size:14px; color:#4ba9df; margin-right:3px; cursor:pointer; border-top-left-radius:3px; border-top-right-radius:3px;}
+.pushImgArea .pushButton li.current{ background:#4ba9df; color:#FFF;}
+.compareSelect{ position:absolute; bottom:3px; right:0px; border:1px solid #dfdfdf; height:28px; width:110px;  float:left;cursor:pointer; line-height:28px; color:#666; z-index:999;}
+.compareSelect .pushIco{ width:29px; border-left:1px solid #dfdfdf; float:left; height:28px; line-height:28px; text-align:center; font-size:12px; color:#666;}
+.compareSelect .pushShow{ width:70px; float:left; height:28px;font-size:14px; padding-left:10px;}
+.compareSelect ul.comList{ display:none; margin-top:29px;}
+.pushedRight .compareSelect ul.comList li{ font-size:12px; width:100px; border:1px solid #dfdfdf; background:#FFF; margin-left:-1px; border-top:0; border-radius:0; padding-left:10px; color:#666; text-align:left;}
+.pushChartArea { width:858px; height:319px; border:1px solid #e8f5fe; border-top:0;}
+
+/*	push_income	*/
+.pushedRight .reset div.tableMain font{ display:inline-block; float:left; max-width:90px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; margin-left:10px;}
+.pushDialog{display:none; background:#FFF; z-index:999; padding:10px 15px; border:1px solid #FFF; border-radius:5px; z-index:999; background:#FFF; position:relative; min-width:440px;}
+.pushDialog h6{ font-size:14px; color:#333; border-bottom:1px solid #eef2f5; text-align:center; padding-bottom:10px; position:relative;}
+.pushDialog div.areaBtn{ overflow:hidden; margin-bottom:30px;}
+.pushDialog div.areaBtn .confirm{ position:static; margin-left:22%; float:left;}
+.pushDialog div.areaBtn .cancel{ position:static; margin-left:10%; float:left;}
+.pushSetDia{ min-width:440px;}
+.pushBox{ margin-top:40px; font-size:14px;}
+.pushBox p{ color:#646e7e; margin-bottom:20px;}
+.pushBox p.pInputBox{ overflow:hidden;}
+.pushBox p.pInputBox label{ float:left;}
+.pushBox p label{ width:150px; text-align:right; font-size:14px; color:#232323; display:inline-block; margin-right:15px;}
+.pushBox p.notice{ color:#ff6c00; font-size:12px; margin-left:35px;}
+.pushBox .eventList label{ display:block;height:100%;}
+.pushBox .eventList span{ display:block;}
+.pushCon .pushBox input{ display:none;}
+.pushBox input.eventName{ border:0px; font-size:14px; color:#646e7e; width:100%; max-width:260px; overflow:hidden; float:left; height:25px; line-height:25px;}
+/*.pushNameList{ margin-left:168px; margin-top:-42px; height:135px; overflow:hidden; position:relative;}*/
+.pushSetDia .box{ margin-left:168px; margin-top:-42px; height:135px; overflow:hidden; position:relative;}
+.pushNameList li i{ display:none;}
+.pushNameList li{ color:#646e7e; margin-bottom:10px;}
+.pushNameList li font{ font-size:12px; color:#646e7e; padding-left:20px; background:url(../image/ico.png) no-repeat -283px -247px; cursor:pointer; margin-right:10px; padding-bottom:3px;}
+.pushNameList li font.current{background:url(../image/ico.png) no-repeat -283px -229px; padding-bottom:3px;}
+.pushBox h4{ font-size:18px; color:#0c72b8; margin-left:30px; margin-bottom:20px;}
+.pushCon .pushBox p{ margin-bottom:10px;}
+.pushCon .pushBox p label{ width:92px;}
+.pushCon .pushBox p.notice{ margin-top:30px; margin-bottom:20px;}
+
+/*	introduction	*/
+.introduceMain{ width:1100px; padding:50px; margin:0 auto; background:#FFF;}
+.introducetion{ width:1200px; padding:50px 0px; margin:0 auto; background:#FFF;}
+.introduceMain div.boxA{ overflow:hidden; border-bottom:1px solid #eef2f5; height:270px; padding:50px 0;}
+.introduceMain div.boxA div.boxLeft{ width:650px; float:left; padding-left:50px;}
+.introduceMain div.boxA div.boxRight{ width:500px; float:left;}
+.introduceMain div.boxA h2{ font-size:24px; color:#333; padding-left:30px;margin-top:20px;}
+.introduceMain div.boxA p{ font-size:14px; color:#666; width:500px; margin-left:30px; margin-top:15px; line-height:28px; line-hight:2;}
+.introduceMain div.boxB{ overflow:hidden; border-bottom:1px solid #eef2f5; height:270px; padding:50px 0;}
+.introduceMain div.boxB div.boxLeft{ width:650px; float:left; padding-left:50px; text-align:left;}
+.introduceMain div.boxB div.boxRight{ width:500px; float:left; text-align:right;}
+.introduceMain div.boxB h2{ font-size:24px; color:#333; text-align:left; margin-top:88px;}
+.introduceMain div.boxB p{ font-size:14px; color:#666; width:500px; margin-top:15px; line-height:28px;}
+.introduceMain div.boxC{ overflow:hidden; border-bottom:1px solid #eef2f5; height:270px; padding:50px 0;}
+.introduceMain div.boxC div.boxLeft{ width:650px; float:left; padding-left:50px;}
+.introduceMain div.boxC div.boxRight{ width:500px; float:left; text-align:center;}
+.introduceMain div.boxC h2{ font-size:24px; color:#333; margin-top:20px;}
+.introduceMain div.boxC p{ font-size:14px; color:#666; width:600px; margin-left:50px; margin-top:25px; line-height:28px;}
+.introduceMain div.boxD{overflow:hidden; height:400px; padding:30px 0px;}
+.introduceMain div.boxD img{ margin-top:35px;}
+.introduceMain div.boxD div.boxLeft{ width:595px; padding-right:5px; float:left; border-right:1px solid #eef2f5; text-align:center;}
+.introduceMain div.boxD div.boxRight{ width:599px; float:left; text-align:center;}
+.introduceMain div.boxD div.boxRight img{ margin-left:6px;}
+.introduceMain div.boxD h2{color:#57bde8; font-size:30px; width:500px; margin:0 auto; text-align:center;}
+.introduceMain div.boxD p{ color:#666; font-size:14px; width:400px; margin:0 auto; text-align:center;}
+
+/*	getstart	*/
+.getStartMain{ width:1200px; margin:0 auto; background:#FFF; padding:60px 0px; padding-bottom:0px;}
+.getStartStep{ background:url(../image/getStartBg.png) no-repeat 0px 0px; height:53px; width:1000px; margin:0 auto; margin-bottom:35px;}
+.getStartStep.tabsChange1{ background:url(../image/getStartBg.png) no-repeat 0px -62px;}
+.getStartStep.tabsChange2{ background:url(../image/getStartBg.png) no-repeat 0px -124px;}
+.getStartStep.tabsChange3{ background:url(../image/getStartBg.png) no-repeat 0px -186px;}
+.getStartStep ul{ overflow:hidden; width:1000px; height:53px; line-height:53px;}
+.getStartStep ul li{ width:250px; float:left; height:53px; font-size:20px; color:#818ea1; text-align:center; cursor:pointer;}
+.getStartStep ul li.current{ color:#FFF;}
+.serviceStart{ width:1000px; margin:0 auto; padding-bottom:50px;}
+.serviceStart .box{ border-bottom:1px solid #eef2f5; padding-bottom:25px; overflow:hidden; height:375PX;}
+.serviceStart .box .boxLeft,.serviceStart .box .boxRight{ float:left; width:500px;}
+.serviceStart .box a{ color:#4ba9df;}
+.serviceStart .box .boxLeft img{ margin-top:45px;}
+.serviceStart .box .boxRight h2{ color:#666; font-size:24px; margin-top:75px;}
+.serviceStart .box .boxRight p{ color:#333; font-size:14px; margin-top:20px; line-height:2;}
+.serviceStart .box .boxRight ul{ margin-top:28px;}
+.serviceStart .box .boxRight ul li{ color:#333; font-size:14px;}
+.serviceStart .box .boxRight img{ margin-left:115px; margin-top:90px;}
+.serviceStart .box .boxLeft h2{ color:#666; font-size:24px; margin-top:105px;}
+.serviceStart .box .boxLeft p{ color:#333; font-size:14px; margin-top:20px; line-height:2;}
+.serviceStart .startRightNow{ width:278px; height:53px; border:1px solid #4ba9df; border-radius:3px; margin:0 auto; font-size:24px; color:#4ba9df; line-height:53px; text-align:center; margin-top:5px; display:block;}
+.addAppStart{ width:880px; margin:0 auto; padding:15px 60px 50px; display:none;}
+.addAppStart h2,.pushStart h2,.DataStart h2{ color:#666; font-size:18px;}
+.addAppStart p,.pushStart p,.DataStart p{ margin-top:25px; color:#666; font-size:18px; font-family:Arial,'Microsoft YaHei';}
+.addAppStart p font,.pushStart p font,.DataStart p font{ color:#4ba9df; margin-right:20px;}
+.addAppStart p i,.pushStart p i,.DataStart p i{ font-size:14px; color:#333; display:block; margin-left:80px;}
+.addAppStart h5,.pushStart h5,.DataStart h5{ margin-top:15px; margin-left:80px;}
+.pushStart{ width:880px; margin:0 auto; padding:15px 60px 50px; display:none;}
+.pushStart p i span,.DataStart p i span{ color:#4ba9df;}
+.pushStart h6,.DataStart h6{text-align:right;margin-top:40px;}
+.DataStart{ width:880px; margin:0 auto; padding:15px 60px 50px; display:none;}
+
+/*	listFunnel	*/
+.funnelTitile,.event .funnelTitle{float: left;font-size: 16px;color: #232323;position:relative;display: inline-block;height: 25px;line-height: 35px;}
+.funnelWrap .questionIco{ margin-top:10px; margin-left:10px;}
+.box{ border:5px solid #cedae1; padding: 10px; width: 865px; background: #fafafa;}
+.event{ margin-top:40px;}
+.event h3,.funnel h3{ font-size: 14px; margin-bottom:10px; overflow: hidden;}
+.event h3 span,.funnel h3 span{ float: left; font-size: 16px;color: #0f4f9d;width:90px;cursor:pointer;}
+.funnelWrap .event span.funnelTitile{float: left; font-size: 16px; color:#232323; width:70px;cursor:pointer; margin:0 auto;}
+.funnelWrap .event span.questionIco{display:inline-block; width:16px; height:16px; background:url(../image/ico.png) no-repeat -1px -177px; margin-left:6px; cursor:pointer;}
+.dataIntRight .dataBox.funnelWrap{ margin-bottom:0px;position:relative;}
+.dataIntRight .dataBox.funnelWrap .select{width:29px; border-left:1px solid #dfdfdf; position:absolute; height: 34px; line-height: 34px; text-align:center; font-size:12px; color:#666;left: 285px;top: 27px;}
+.event h3 #daterangepicker{ float: right;}
+#date{ height: 20px; line-height: 20px; border: 1px solid #eef2f5;}
+#eventListTab td{ overflow:hidden; word-wrap: break-word;}
+.event table,.funnel table{ width: 100%;color:#646e7e; font-size:12px; text-align:center; table-layout:fixed;}
+.trFirst{ background:#eef2f5; color:#818ea1;height:45px; text-align:center;}
+.event table td,.funnel table td{border:1px solid #eef2f5; height: 35px; overflow:hidden; word-wrap: break-word; }
+.funnel{ margin-top: 15px;}
+.funnelDialog{padding: 10px; width: 578px; background: #FFF; position:fixed; top:25%; left:40%;z-index: 999;border-radius: 5px;}
+.eidt,.delete{ width: 35px; height: 20px; line-height: 20px; text-align: center; border: 1px solid #000000; display: inline-block; cursor: pointer; font-size: 12px; color: #FFF;}
+.eidt{border:1px solid #4ba9df; border-radius:2px; background:#4ba9df;}
+.delete{border:1px solid #BD3D3D; border-radius:2px; background:#BD3D3D;}
+#addFunnel{width: 130px; height: 36px; margin-top: 10px; border: 1px solid #8ed65b; background: #8ed65b; border-radius: 5px; line-height: 30px; text-align: center; font-size: 16px; color: #fefefe; cursor: pointer; -moz-border-radius:5px; -ms-border-radius:5px; -webkit-border-radius:5px;}
+#addFunnel.addNewFunnel{height:35px; line-height:35px;}
+#funnelName{ height: 25px; padding: 0px 5px; line-height: 25px; width: 180px;}
+.funnelDialog h2{font-size:14px; color:#333; border-bottom:1px solid #eef2f5; text-align:center; padding-bottom:15px; position:relative; margin-bottom:25px;cursor:pointer;}
+.funnelDialog h2 span{position:absolute; width:20px; height:20px; background:url(../image/ico.png) no-repeat 0px -212px; cursor:pointer; top:0px; right:0px;}
+.funnelDialog h1 label{ font-size: 12px; color:#818ea1; margin-right: 10px;}
+.funnelInfo{ margin: 10px 0; color: #818ea1;}
+.funnelInfo p.Tem{ margin-left: 27px;}
+.action{ color: #646e7e; font-size: 12px; margin-bottom:15px;}
+.action label{ margin-right: 5px;}
+#action{ height: 25px; padding: 0px 5px; line-height: 25px; width: 180px;}
+table.stepFunnel{ width: 560px; border: 1px solid #eef2f5;margin: 10px auto;}
+table.stepFunnel td{border:1px solid #eef2f5; height: 35px; color: #646e7e; text-align: center; font-size: 12px; }
+table.stepFunnel td label{ font-size: 12px; margin-right: 8px;}
+table.stepFunnel .stepTag{line-height: 25px;height: 25px;width: 60%;}
+table.stepFunnel .stepCover{line-height: 25px;height: 25px;width: 25%;}
+.addStep{ width: 80px; height: 25px; line-height: 25px; text-align: center; display: inline-block; cursor: pointer; font-size: 12px; color: #FFF;}
+.addNewFunnel{ display: block; margin: 10px auto;}
+.funnelBox{ overflow: hidden; background:#FFF; margin-bottom:25px;padding:10px 0; position:relative;}
+.funnelBox p.setTime{ position:absolute; bottom:10px; left:30px;color:#818ea1; font-size:12px;}
+.funnelBox h4{ float: left;font-size: 16px; color:#232323; margin:10px 30px;}
+.funnelBox h4 i{ margin-left:15px;}
+.deleteFunnel{  float: right; font-size: 14px; text-align: center; color: #232323; cursor: pointer; margin:10px;display: block;border: 1px solid #E07A10;padding: 3px 8px;}
+.main_pic{ float: left; width: 50%; height: 400px;}
+#funnelListTab{ margin-top: 60px; width: 49%; float: left; border-left:1px solid #eef2f5;}
+#funnelListTab tr{height:35px;}
+#funnelListTab td{ overflow:hidden; text-overflow:ellipsis; -webkit-text-overflow:ellipisis; white-space:nowrap; height:30px;}
+.funnelTitle{ overflow: hidden; margin-bottom: 15px;}
+
+/*	SDK_download	*/
+.SDKMain{ width:1000px; margin:0 auto; background:#FFF; padding:35px 100px; padding-bottom:40px;}
+.SDKMain h2{ color:#333; font-size:18px; position:relative; }
+.SDKMain h2 span{ color:#666; font-size:12px;}
+.SDKMain h2 a{ color:#2a95d3; font-size:12px; position:absolute; right:0px; top:8px;}
+.SDKMain .box{ width:1000px; margin:0 auto; margin-top:20px;}
+.SDKMain .box h3{ overflow:hidden; position:relative;}
+.SDKMain .box h3 span.android{ float:left; background:url(../image/ico.png) no-repeat -71px -33px; width:20px; height:20px; display:inline-block;}
+.SDKMain .box h3 span.IOS{ float:left; background:url(../image/ico.png) no-repeat -71px -52px; width:20px; height:20px; display:inline-block;}
+.SDKMain .box h3 span{ float:left; color:#232323; font-size:14px; margin-left:8px;}
+.SDKMain .box h3 span.dataDownload{ float:right; font-size:12px; background:url(../image/ico.png) no-repeat -233px 0px; height:16px; width:50px; padding-left:20px;}
+.SDKMain .box h3 span.dataDownload a{color:#2a95d3;}
+.SDKMain .box table{ width:100%; margin-top:20px; border-left:1px solid #eef2f5; font-size:12px; text-align:center;}
+.SDKMain .box table tr.trFirst{ background:#eef2f5; border-bottom:1px solid #eef2f5; height:45px; color:#818ea1;}
+.SDKMain .box table tr{ height:55px; color:#333;}
+.SDKMain .box table td{ border-bottom:1px solid #eef2f5; border-right:1px solid #eef2f5; width:25%;}
+.SDKMain .box table a font{background:url(../image/ico.png) no-repeat -233px 8px; padding:7px; margin-left:10px;}
+
+/*	contact_us	*/
+.contactUsMain{ width:1200px; margin:0 auto; background:#FFF;}
+.contactUsMain .allBox .otherLog{ width:1200px; height:330px;}
+.contactUsMain .allBox .otherLog h2{ color:#818ea1; font-size:24px; text-align:center; text-align:center;}
+.contactUsMain .allBox .otherLog h3{ color:#818ea1; font-size:14px; text-align:center; text-align:center;}
+.contactUsMain .allBox .otherLog h4{ background:url(../image/contactUsBg.png) no-repeat; height:100px; width:800px; margin:0 auto; margin-top:70px;}
+.contactUsMain .allBox .otherLog p{ width:960px; margin:10px auto; font-size:14px; color:#818ea1; text-indent:2em; line-height:28px;}
+.contactUsMain .allBox .otherLog table{ width:90%; margin:0 auto; text-align:center; color:#818ea1; }
+.contactUsMain .allBox .otherLog table tr.trFirst{font-size:18px; height:60px; background:#FFF;}
+.contactUsMain .allBox .otherLog table tr{ font-size:16px; height:35px;}
+
+/*	help_document	*/
+.helpMain{ width:1100px; margin:0 auto; background:#FFF; overflow:hidden; padding:40px 50px;}
+.helpMain .helpLeft{ width:198px; border-top:4px solid #4ba9df; float:left;}
+.helpMain .helpLeft ul{ border:1px solid #eef2f5; border-top:0;}
+.helpMain .helpLeft ul li{ height:49px; border-top:1px solid #eef2f5; line-height:49px; padding-left:30px;}
+.helpMain .helpLeft ul li a{ color:#646e7e; font-size:14px;}
+.helpMain .helpLeft ul li.current a{ color:#4ba9df;}
+.helpMain .helpLeft ul li:hover a{ color:#4ba9df;}
+.helpMain .helpRight{ width:840px; float:left; margin-left:60px;}
+.helpMain .helpRight .helpCon{ display:none;}
+.helpMain .helpRight .helpCon h2{ font-size:18px; color:#333; margin-top:-5px;}
+.helpMain .helpRight .helpCon h3{ font-size:12px; color:#333; margin:5px 0px;}
+.helpMain .helpRight .helpCon h4{ font-size:14px; color:#333; margin-bottom:15px;}
+.helpMain .helpRight .helpCon h5{ font-size:14px; color:#232323; margin:10px 0;}
+.helpMain .helpRight .helpCon table{ border-left:1px solid #EEF2F5; margin-bottom:25px;}
+.helpMain .helpRight .helpCon table tr{ color:#333; font-size:12px; height:41px;}
+.helpMain .helpRight .helpCon table tr.trFirst{ height:43px; color:#818ea1; text-align:center;}
+.helpMain .helpRight .helpCon table td{ padding-left:35px;}
+.helpMain .helpRight .helpCon table td,.helpMain .helpRight .helpCon table th{ border-bottom:1px solid #eef2f5; border-right:1px solid #eef2f5;}
+.helpMain .helpRight .helpCon dl dt{ color:#4ba9df;}
+.helpMain .helpRight .helpCon dl dd{ color:#666; margin-bottom:20px;}
+.helpMain .helpRight .AndroidSDK .catalog,.IOSPEM .catalog,.IOSSDK .catalog{ border:1px solid #eef2f5; padding:10px; width:45%;}
+.helpMain .helpRight .AndroidSDK .catalog p,.helpMain .helpRight .IOSPEM .catalog p,.helpMain .helpRight .IOSSDK .catalog p{ margin-bottom:8px;}
+.helpMain .helpRight .AndroidSDK .catalog p a,
+.helpMain .helpRight .IOSSDK .catalog p a,
+.helpMain .helpRight .IOSPEM .catalog p a
+{ color:#333;}
+.helpMain .helpRight .AndroidSDK .catalog p a:hover,
+.helpMain .helpRight .IOSSDK .catalog p a:hover,
+.helpMain .helpRight .IOSPEM .catalog p a:hover
+{ color:#4ba9df;}
+.helpMain .helpRight .AndroidSDK .catalog p.space0,
+.helpMain .helpRight .IOSSDK .catalog p.space0,
+.helpMain .helpRight .IOSPEM .catalog p.space0
+{ font-weight:bold;}
+.helpMain .helpRight .AndroidSDK .catalog p.space2,
+.helpMain .helpRight .IOSSDK .catalog p.space2,
+.helpMain .helpRight .IOSPEM .catalog p.space2
+{ font-weight:bold; text-indent:2em;}
+.helpMain .helpRight .AndroidSDK .catalog p.space4,
+.helpMain .helpRight .IOSSDK .catalog p.space4,
+.helpMain .helpRight .IOSPEM .catalog p.space4
+{ text-indent:4em;}
+.helpMain .helpRight .AndroidSDK .text a,
+.helpMain .helpRight .IOSSDK .text p a,
+.helpMain .helpRight .IOSPEM .text p a
+{ color:#4ba9df}
+.helpMain .helpRight .AndroidSDK .notice,
+.helpMain .helpRight .IOSSDK .notice,
+.helpMain .helpRight .IOSPEM .notice 
+{ color:#ff6c00}
+.helpMain .helpRight .AndroidSDK table,
+.helpMain .helpRight .IOSSDK table,
+.helpMain .helpRight .IOSPEM table 
+{width: 100%;margin-top: 15px;border-top: 1px solid #eef2f5;}
+.helpMain .helpRight .AndroidSDK b,
+.helpMain .helpRight .IOSSDK b,
+.helpMain .helpRight .IOSPEM b 
+{ font-weight:bold;}
+.helpMain .helpRight .AndroidSDK .content{ width:100%; margin:15px 0px;}
+.helpMain .helpRight h3.mainTit{ font-size:16px; color:#333; margin-top:15px; font-weight:bold;}
+.helpMain .helpRight h4.subTit{ font-size:14px; margin-bottom: 10px; font-weight:bold;}
+.helpMain .helpRight div.text{ color:#333; margin-bottom:15px;}
+.helpMain .helpRight div.text img{ display:block; text-align:center; margin-top:10px;} 
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*	about_us	*/
+.aboutUsMain{ width:1000px; padding:50px 100px; margin:0 auto; background:#FFF;}
+.aboutUsMain div.box{ padding:10px 25px; height:160px;}
+.aboutUsMain div.box h2{ font-size:30px; color:#333;}
+.aboutUsMain div.box p{ font-size:14px; color:#666; margin-top:6px;}
+.aboutUsMain div.boxA{ border-top:1px solid #eef2f5; padding:25px; background:url(../image/aboutImgA.png) no-repeat 500px 55px; height:225px;}
+.aboutUsMain div.boxA h2{ font-size:30px; color:#57bde8; margin-top:35px;}
+.aboutUsMain div.boxA p{ color:#999; font-size:14px; width:450px; margin-top:15px; line-height:2;}
+.aboutUsMain div.boxB{ overflow:hidden; border-top:1px solid #eef2f5; margin-top:35px;}
+.aboutUsMain div.boxB .left,.aboutUsMain div.boxB .right{ float:left; width:499px; padding-top:35px;}
+.aboutUsMain div.boxB .right{ border-left:1px solid #eef2f5;}
+.aboutUsMain div.boxB .left h2,.aboutUsMain div.boxB .right h2{ font-size:30px; color:#57bde8; text-align:center;}
+.aboutUsMain div.boxB .left p,.aboutUsMain div.boxB .right p{ font-size:14px; color:#999; text-align:center; width:450px; margin:0 auto; line-height:2;}
+.aboutUsMain a{ display:block; color:#57bde8;}
+.aboutUsMain div.boxB .left img,.aboutUsMain div.boxB .right img{ text-align:center; margin-top:35px;}
+
+/*	iframeA	*/
+.iframeTextPush{ float: left; width: 1000px; position:relative;}
+.iframeTextPush h2{ font-weight: normal; font-size: 18px; color: #333; margin-bottom: 20px; position:absolute; top:20px; left:20px;}
+.iframeTextPush h2 span.ios{ font-size:14px; color:#646e7e; margin:0 10px;}
+.iframeTextPush h2 span.ios font.ios{background:url(../image/ico.png) no-repeat -71px -52px; width:20px; height:20px; display:inline-block;}
+.iframeTextPush h2 span.android{font-size:14px; color:#646e7e; margin:0 10px;}
+.iframeTextPush h2 span.android font.android{ background:url(../image/ico.png) no-repeat -71px -30px; width:20px; height:20px; display:inline-block;}
+.iframeTextPush h2 font{font-size:14px; color:#646e7e;}
+.iframeTextPush iframe#iframeA{ width:100%; height:800px; frameborder:no; border:0; scrolling:no;}
+
+/*	article_list	*/
+.articleMain{ width:1000px; margin:0 auto;}
+.articleBox{ padding:30px 0px; border-bottom:1px solid #F1F1F1;}
+.articleBox h2{ font-size:18px; color:#333; position:relative;}
+.articleBox h2 font{ color:#999; font-size:14px; position:absolute; right:0px; overflow:hidden; top:5px;}
+.articleBox div{ font-size:14px; color:#333; margin:10px 0px; line-height:1.8;}
+.articleBox div a{ color:#46a1f5; font-size:12px; margin-left:10px;}
+.articleBox div a:hover{ text-decoration:underline;}
+.articleBox h3{ font-size:14px; color:#999;}
+.articleBox h3 span{ margin-right:30px;}
+.articleBox div.hasImg{ overflow:hidden;}
+.articleBox div.hasImg .articleImg{ width:206px; height:126px; float:left; margin:5px 44px 5px 0px; }
+.articleBox div.hasImg .articleImg img{ width:206px; height:126px;}
+.articleBtn{ width:1000px; margin:0 auto;} 
+.pagination li a.first,.pagination li a.last{ display:none;}
+.articleBtnBox{ width:250px; float:left; color:#818ea1; font-size:12px; margin-top:15px; position:relative;}
+.articleBtnBox font{ padding:2px 10px; border:1px solid #DFDFDF; margin:0px 5px; cursor:pointer; padding-right:0px; border-radius:2px; display:inline-block; width:35px;}
+.articleBtnBox font em{ display:inline-block; width:13px; font-style:normal; text-align:center;}
+.articleBtnBox font i{ border-left:1px solid #DFDFDF; padding:3px 7px; margin-left:5px; background:url(../image/ico.png) no-repeat -137px -136px;}
+.articleBtnOl{ width:44px; position:absolute; z-index:99; left:126px; border:1px solid #DFDFDF; top:-64px; background:#FFF;}
+.articleBtnOl li{text-align:center; border-bottom:1px solid #DFDFDF; cursor:pointer;}
+.articleBtnOl li:hover{ background:#f1f1f1;}
+.pagination{ widrh:600px; float:right; }
+.articleBtn .pagination{ margin-top:15px;}
+.articleBtn .pagination > li > a, .pagination > li > span{ padding:3px 8px; border:1px solid #DFDFDF; border-radius:2px; margin-left:5px;}
+.articleBtn .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{ background-color:#6fbae5; border-color:#6fbae5;}
+.articleBtn .pagination > li > a, .pagination > li > span{ color:#818ea1; font-size:12px;}
+.articleBtn .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{ color:#FFF;}
+
+/*	article_article	*/
+.articleBody h1{ font-size:22px; color:#333; padding:30px 0px 14px 0px; position:relative; border-bottom:1px solid #f1f1f1;}
+.articleBody h1 font{ font-size:14px; color:#999; position:absolute; right:0px; top:35px;}
+.articleContent{ padding:30px 0px 20px 0px;}
+.articleBody .articleContent p{ font-size:14px; color:#333; line-height:1.8; margin-bottom:20px; text-indent:2em;}
+.articleBody .articleContent p.extend{ font-size:12px; color:#666; line-height:1.7; padding:14px 12px; border:1px solid #f1f1f1; background:#fcfcfc;}
+.articleBody h3{ font-size:14px; color:#999; padding-bottom:20px; border-bottom:1px solid #f1f1f1;}
+.articleBody h3 span{ margin-right:30px;}
+.articleBody h4{ padding:20px 0px 30px; position:relative; font-size:14px; color:#999;}
+.articleBody h4 a{ color:#46a1f5; font-size:14px;}
+.articleBody h4 font.next{position:absolute; right:0px;}
+.articleBody ul{ margin-top:-16px; text-indent:2em; font-size:14px; color:#333;}
+
+
+/*	适配投影仪 800*600	*/
+@media screen and (max-width: 960px) {
+/* home.jsp	*/
+body{ background:#143248; line-height:1.7; font-size:0.5em; font-family:Arial,"Microsoft YaHei"; width:100%; overflow-x:hidden;}
+.header{ width: 100%; margin:0 auto; background: #0c72b8; height: 72px; line-height: 70px;}
+.header li.regLog a{ font-size:0.8em;}
+.header .header_right .user_center a{ display:none; margin-left:0px;}
+.header ol.navList{ min-width:15%; float:none;}
+.header ol.navList li{ font-size:0.8em; margin-right:2%;}
+.header .header_right{ margin:0px;}
+.indexSlide{ height:460px;}
+.indexSlide img{ width:100%;}
+.slide.left h1{ font-size:3em; top:20%; left:10%;}
+.slide.right h1{ font-size:3em; top:20%; right:10%;}
+.slide.right ul{ font-size:2em; top:30%; right:10%;}
+.slide.left ul{ font-size:2em; top:30%; left:10%;}
+.slide.right h3{ width:10%; height:5%; top:50%; right:10%; font-size:2em; line-height:2em;}
+.slide.left h3{ width:10%; height:5%; top:50%; left:10%; font-size:2em; line-height:2em;}
+.homeOuter{ padding:30px 0px;}
+.homeOuter .homeRecent h2{ font-size:2.875em; color:#333; text-align:center; margin-bottom: 5%;}
+.homeOuter .homeRecent{ width:100%;}
+.homeOuter .homeRecent a{ font-size:0.8em;}
+.homeOuter .homeRecent p font{ right:0%;}
+.homeOuter .homeRecent .left{ width:46%; float:left; border-right:1px dashed #818ea1; padding: 0px 2%;}
+.homeOuter .homeRecent .right{ width:43%; float:left; padding:0px 2%;}
+.homeOuter .homeRecent .right p{ margin:0px;}
+.homeOuter .homeCase h2{ font-size:2.875em;}
+.homeOuter .homeBox table{ font-size:1em;}
+.homeOuter .homeBox table td{ width:25%;}
+.homeOuter .homeBox table tr.trFirst{ font-size:1.75em; height:40px;}
+.homeOuter .homeBox table tr.trImg{ height:140px;}
+.homeOuter .homeBox table tr.trImg img{ width:65%; height:71%;}
+.homeOuter .homeCase ul li{ width:28%;}
+.footMain{ width:100%;}
+.footMain .footBox{ padding-left:10%;}
+.footer{ width:100%;}
+.footer .webShare{ right:7%;}
+
+/*	other_login.jsp	*/
+.allMain{ width:100%; padding:35px 0px;}
+.allMain h1{ margin-left:5%; font-size:2em;}
+.allMain .allBox{ margin:0px 5%; width:90%;}
+
+/*	application_list.jsp	*/
+.main{ width:100%;}
+.appList{ width:92%; padding:40px 4%;}
+.appList .appTable{ padding:0px 15px;}
+.appList .appTable table .appName span#appname_span{ font-size:0.8em;}
+.appList .appTable table .appName span{ font-size:0.6em;}
+.appTable tr td:nth-child(1){ width:10%;}
+.appTable tr td:nth-child(2){ width:30%;}
+.appTable tr td:nth-child(3){ width:30%; word-break:break-all;word-wrap:break-word;white-space: pre-wrap; padding:0px 2%;}
+.appList .appTable table .addAndroidIco, .appList .appTable table .addIOSIco,.appList .appTable table .appDetail{ width:70px;}
+
+/*	application_config.jsp	*/
+.config{ width:100%; padding:30px 0px;}
+.config .configBox{ width:94%; margin:0 auto;}
+.config .configBox .configDetail{ width:94%; padding:20px 3%;}
+.config .configBox .configDetail li font.keyModify{ left:65%;}
+.config .configBox .configDetail li font.noUse{left:62%;}
+.dataTitle{ margin-left:3%;}
+.turnButton{ width:100%;}
+.turnButton li.pervStep{ left:49%;}
+.turnButton li.goAppList{ left:24%;}
+
+/*	user_center.jsp	*/
+.userCenter{ width:100%; padding:35px 0px;}
+.userCenter h1{ margin-left:3%;}
+.userCenter .userCenterBox{ width:90%; margin:0 auto;}
+.userCenter .userCenterBox .userDetial{ width:96%; padding:20px 2%;}
+
+/*	application_detail.jsp	*/
+.main .left{ width: 200px; float: left; background: #FFF; position: absolute; left: -180px; z-index:9999;}
+.main .right{ width:92%; margin:4%; float:none; padding:0px;}
+.main .right .rightBox .dataPush{ width:20%;}
+.main .right .rightBox .mulPush{ width:22%;}
+.main .right .rightBox .dataTable{ width:50%; margin-left:5%; padding:0px;}
+
+/**/
+.dataIntRight{ width:92%;}
+.dataIntRight .dataBox ul.totalBox li{ width:32%;}
+.dataIntRight .dataBox div.dataChartsArea{ width:100%;}
+.dataIntRight .dataBox ul.dataBoxTabs{ width:100%;}
+.pushChartArea{ width:100%;}
+.pushedRight{ width:92%;}
+.pushedRight .reset{ width:93%;}
+
+/**/
+.SDKMain{ width:92%; padding:4%;}
+.SDKMain .box{ width:100%;}
+.getStartMain{ width:100%;}
+.getStartStep{}
+.introducetion{ width:100%;}
+.introduceMain div.boxA div.boxLeft{ width:50%; padding:0px;}
+.introduceMain div.boxA div.boxRight{ width:49%;}
+.introduceMain div.boxA div.boxRight img{ width:80%; height:80%; margin-top: 10%; margin-left: 10%;}
+.introduceMain div.boxA h2{font-size:2em;}
+.introduceMain div.boxA p{ font-size:1.25em; width:100%;}
+.introduceMain div.boxB div.boxRight{ width:50%; text-align:center;}
+.introduceMain div.boxB div.boxRight img{ width:80%; height:80%;}
+.introduceMain div.boxB div.boxLeft{ width:49%; padding:0px;}
+.introduceMain div.boxB h2{ font-size:2em;}
+.introduceMain div.boxB p{ font-size:1.25em; width:100%;}
+.introduceMain div.boxC div.boxLeft{ width:50%; padding:0px;}
+.introduceMain div.boxC div.boxRight{ width:49%; text-align:right;}
+.introduceMain div.boxC h2{ font-size:2em;}
+.introduceMain div.boxC p{ font-size:1.25em; width:100%;}
+.introduceMain div.boxC div.boxRight img{ width:80%; height:80%;}
+.introduceMain div.boxD div.boxLeft{ width:50%;}
+.introduceMain div.boxD div.boxRight{ width:49%;}
+.introduceMain div.boxD h2{ width:100%; font-size:2.25em;}
+.introduceMain div.boxD p{ font-size:1.25em;}
+.introduceMain div.boxD img{ width:80%; height:80%;}
+.helpMain{ width:100%; padding:0px;}
+.helpMain .helpRight{ width:94%; margin:3%;}
+.helpMain .helpLeft{ position:fixed; left:-180px; cursor:pointer;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
