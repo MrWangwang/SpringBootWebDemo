@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.redis.connection.RedisConnection;
+import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.RedisSerializer;
@@ -123,6 +124,39 @@ public class RedisServiceImpl implements IRedisService{
                 return serializer.deserialize(res);
             }
 	    });
+		return result;
+	}
+
+	@Override
+	public boolean setBit(final String key,final long obj,final boolean flag){
+		boolean result = redisTemplate.execute(new RedisCallback<Boolean>() {
+			@Override
+			public Boolean doInRedis(RedisConnection connection) throws DataAccessException {
+				RedisSerializer<String> serializer = redisTemplate.getStringSerializer();
+				connection.setBit(serializer.serialize(key),obj,flag);
+				return true;
+			}
+		});
+		return result;
+	}
+
+	@Override
+	public boolean watch(final String key,final String goodNum) {
+		final int gNum = Integer.valueOf(get(key));
+		RedisConnectionFactory rf = redisTemplate.getConnectionFactory();
+		RedisConnection rc = rf.getConnection();
+		boolean result = redisTemplate.execute(new RedisCallback<Boolean>() {
+			@Override
+			public Boolean doInRedis(RedisConnection connection) throws DataAccessException {
+				RedisSerializer<String> serializer = redisTemplate.getStringSerializer();
+				connection.watch(serializer.serialize(key));
+				if(gNum<10){
+
+				}
+				connection.unwatch();
+				return true;
+			}
+		});
 		return result;
 	}
 

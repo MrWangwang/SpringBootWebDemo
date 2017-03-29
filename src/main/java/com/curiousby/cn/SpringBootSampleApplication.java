@@ -16,6 +16,7 @@ package com.curiousby.cn;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
@@ -26,7 +27,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * @version 
  */
 @EnableTransactionManagement  //事务自动扫描
-@SpringBootApplication 
+@SpringBootApplication
+@ComponentScan(value = {"com"})
 @ServletComponentScan  // servlet 自动扫描 
 public class SpringBootSampleApplication {
 

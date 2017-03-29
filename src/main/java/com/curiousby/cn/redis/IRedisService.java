@@ -22,5 +22,9 @@ public interface IRedisService {
 	public long rpush(String key,Object obj);
 	
 	public String lpop(String key);
+
+	public boolean setBit(String key,long obj,boolean flag);
+
+	public boolean watch(String key, String goodNum);
 	
 }

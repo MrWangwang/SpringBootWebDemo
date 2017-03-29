@@ -11,43 +11,29 @@
  * disclose such Confidential Information and shall use it only in
  * accordance with the terms of the license.
  */
-package com.curiousby.cn.service;
+package com.curiousby.cn.two.dao;
 
-import javax.annotation.Resource;
 import javax.transaction.Transactional;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Service;
+import org.springframework.data.repository.CrudRepository;
 
-import com.curiousby.cn.one.dao.UserDao;
-import com.curiousby.cn.one.entity.User;
+import com.curiousby.cn.two.entity.User;
+import org.springframework.stereotype.Repository;
 
 /**
- * @Type UserService.java
+ * @Type UserDao.java
  * @Desc 
  * @author cmcc-B100036
- * @date 2016年11月10日 下午3:56:14
+ * @date 2016年11月10日 下午3:49:04
  * @version 
  */
+@Repository(value = "UserDaoTwo")
 @Transactional
-@Service
-public class UserService {
+public interface  UserDao extends CrudRepository<User, Integer>{
 
-    @Autowired
-    @Qualifier("UserDaoOne")
-    com.curiousby.cn.one.dao.UserDao userDaoOne;
-    @Autowired
-    @Qualifier("UserDaoTwo")
-    com.curiousby.cn.two.dao.UserDao userDaoTwo;
-    
-    
-    public User  findById(int userId){
-        return userDaoOne.findById(userId);
-    }
-    public com.curiousby.cn.two.entity.User  findByName(String name){
-        return userDaoTwo.findByUserName(name);
-    }
+    //crud
+    User findByUserName(String name);
 
 }
 

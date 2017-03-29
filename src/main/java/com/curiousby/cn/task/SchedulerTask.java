@@ -32,10 +32,10 @@ public class SchedulerTask {
     
     private final Logger logger = LoggerFactory.getLogger(SchedulerTask.class);
 
-    @Scheduled(cron = "0/2 * * * * ?")  
-    public void scheduler() {
-        logger.info("===================== scheduled ====================");
-    }
+//    @Scheduled(cron = "0/2 * * * * ?")
+//    public void scheduler() {
+//        logger.info("===================== scheduled ====================");
+//    }
 
 
 }

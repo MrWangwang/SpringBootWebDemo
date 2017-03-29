@@ -15,9 +15,11 @@ package com.curiousby.cn.one.dao;
 
 import javax.transaction.Transactional;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.repository.CrudRepository;
 
 import com.curiousby.cn.one.entity.User;
+import org.springframework.stereotype.Repository;
 
 /**
  * @Type UserDao.java
@@ -26,6 +28,7 @@ import com.curiousby.cn.one.entity.User;
  * @date 2016年11月10日 下午3:49:04
  * @version 
  */
+@Repository(value = "UserDaoOne")
 @Transactional
 public interface  UserDao extends CrudRepository<User, Integer>{
 

@@ -33,6 +33,7 @@ import com.curiousby.cn.service.UserService;
  */ 
 @Controller
 @RequestMapping(value="/web/users")
+//@Api(value = "用户控制",description = "用户控制类测试",tags = "测试接口")
 public class UserController {
 
    
@@ -45,6 +46,13 @@ public class UserController {
     public User  getUserById(@PathVariable int userId){
         
         return  userService .findById(userId); 
+    }
+
+    @ResponseBody
+    @RequestMapping(value="/name/{name}", method=RequestMethod.GET)
+    public com.curiousby.cn.two.entity.User  getUserByName(@PathVariable String name){
+
+        return  userService .findByName(name);
     }
 
 }
